@@ -170,3 +170,11 @@ Buildable Visual Studio project files are included for both assemblies. See
 `BUILDING.md` for the reproducible command and configurable RimWorld/Harmony
 reference paths. `Tools/Validate.ps1` parses every XML file and checks translation
 key and formatting-placeholder parity, including the optional Odyssey tree.
+
+## Reuse and redistribution
+
+Useful components and techniques may be reused in original mods with clear
+attribution to Lordlony and a link to this repository. Complete copies,
+functional replacements, and duplicate Steam Workshop uploads of Smoothing
+Expanded require prior written permission. The mod name and artwork are not
+licensed. See [LICENSE.md](LICENSE.md) for the full terms.
