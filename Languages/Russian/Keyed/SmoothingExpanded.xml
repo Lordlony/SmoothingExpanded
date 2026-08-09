@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded.SettingsCategory>Smoothing Expanded</SmoothingExpanded.SettingsCategory>
+  <SmoothingExpanded.Section.Speed>Множители скорости</SmoothingExpanded.Section.Speed>
+  <SmoothingExpanded.Section.Natural>Ванильные гладкие стены и полы</SmoothingExpanded.Section.Natural>
+  <SmoothingExpanded.Section.Chunk>Гладкие стены и полы из обломков</SmoothingExpanded.Section.Chunk>
+  <SmoothingExpanded.Section.Uninstall>Подготовка сохранения и безопасное удаление</SmoothingExpanded.Section.Uninstall>
+  <SmoothingExpanded.Instant>Мгновенно</SmoothingExpanded.Instant>
+  <SmoothingExpanded.InstantValue>мгновенно</SmoothingExpanded.InstantValue>
+  <SmoothingExpanded.WallSpeed>Множитель скорости сглаживания стен: {0}</SmoothingExpanded.WallSpeed>
+  <SmoothingExpanded.FloorSpeed>Множитель скорости сглаживания полов: {0}</SmoothingExpanded.FloorSpeed>
+  <SmoothingExpanded.InstantWallTooltip>Делает сглаживание практически мгновенным. По умолчанию выключено, так как это читерская настройка.</SmoothingExpanded.InstantWallTooltip>
+  <SmoothingExpanded.InstantFloorTooltip>Делает сглаживание пола практически мгновенным. Требуется Harmony. По умолчанию: выключено.</SmoothingExpanded.InstantFloorTooltip>
+  <SmoothingExpanded.SpeedExplanation>В ванильной игре — 1x. По умолчанию в этом моде — 2x. Навык строительства, манипуляция, зрение и общая скорость работы по-прежнему учитываются.</SmoothingExpanded.SpeedExplanation>
+  <SmoothingExpanded.ResetWallSpeed>Сбросить скорость стен до 2x</SmoothingExpanded.ResetWallSpeed>
+  <SmoothingExpanded.ResetFloorSpeed>Сбросить скорость полов до 2x</SmoothingExpanded.ResetFloorSpeed>
+  <SmoothingExpanded.FloorSpeedHarmony>Harmony позволяет отдельно настраивать скорость полов. Без него полы используют скорость стен.</SmoothingExpanded.FloorSpeedHarmony>
+  <SmoothingExpanded.NaturalWealthHeader>Стоимость гладких поверхностей</SmoothingExpanded.NaturalWealthHeader>
+  <SmoothingExpanded.OverrideNaturalWallWealth>Изменить стоимость ванильных гладких стен (по умолчанию: выкл.)</SmoothingExpanded.OverrideNaturalWallWealth>
+  <SmoothingExpanded.OverrideNaturalWallWealthTooltip>Обнаруженные ванильные гладкие стены используют выбранное ниже значение.</SmoothingExpanded.OverrideNaturalWallWealthTooltip>
+  <SmoothingExpanded.NaturalWallValue>Стоимость клетки ванильной гладкой стены: {0}</SmoothingExpanded.NaturalWallValue>
+  <SmoothingExpanded.ResetWallWealth>Сбросить стоимость стен (выкл.; значение 0)</SmoothingExpanded.ResetWallWealth>
+  <SmoothingExpanded.FloorWealthHarmony>Требуется Harmony.</SmoothingExpanded.FloorWealthHarmony>
+  <SmoothingExpanded.OverrideNaturalFloorWealth>Экспериментально: изменить стоимость ванильных гладких полов (по умолчанию: выкл.)</SmoothingExpanded.OverrideNaturalFloorWealth>
+  <SmoothingExpanded.OverrideNaturalFloorWealthTooltip>Изменяет кэшированную стоимость полов RimWorld после пересчёта. Может конфликтовать с модами, меняющими стоимость карты, рейдов или полов.</SmoothingExpanded.OverrideNaturalFloorWealthTooltip>
+  <SmoothingExpanded.RequiresHarmonyTooltip>Требуется Harmony. Скорость и стоимость стен доступны и без него.</SmoothingExpanded.RequiresHarmonyTooltip>
+  <SmoothingExpanded.NaturalFloorValue>Стоимость клетки ванильного гладкого пола: {0}</SmoothingExpanded.NaturalFloorValue>
+  <SmoothingExpanded.FloorWealthWarning>Экспериментальная настройка; для максимальной совместимости оставьте выключенной. В выключенном состоянии изменение полностью пропускается.</SmoothingExpanded.FloorWealthWarning>
+  <SmoothingExpanded.ResetFloorWealth>Сбросить стоимость полов (выкл.; значение 0)</SmoothingExpanded.ResetFloorWealth>
+  <SmoothingExpanded.NaturalBeautyHeader>Красота гладких поверхностей</SmoothingExpanded.NaturalBeautyHeader>
+  <SmoothingExpanded.RemoveNaturalWallBeauty>Изменить красоту стен (по умолчанию: выкл.)</SmoothingExpanded.RemoveNaturalWallBeauty>
+  <SmoothingExpanded.RemoveNaturalWallBeautyTooltip>Обнаруженные ванильные гладкие стены используют выбранное ниже значение. Применяется сразу; Harmony не требуется.</SmoothingExpanded.RemoveNaturalWallBeautyTooltip>
+  <SmoothingExpanded.NaturalWallBeautyValue>Красота ванильной гладкой стены: {0}</SmoothingExpanded.NaturalWallBeautyValue>
+  <SmoothingExpanded.RemoveNaturalFloorBeauty>Изменить красоту полов (по умолчанию: выкл.)</SmoothingExpanded.RemoveNaturalFloorBeauty>
+  <SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>Обнаруженные ванильные гладкие полы используют выбранное ниже значение. Применяется сразу; Harmony не требуется.</SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>
+  <SmoothingExpanded.NaturalFloorBeautyValue>Красота ванильного гладкого пола: {0}</SmoothingExpanded.NaturalFloorBeautyValue>
+  <SmoothingExpanded.EnableChunkConstruction>Включить гладкие стены и полы из обломков (требуется перезапуск)</SmoothingExpanded.EnableChunkConstruction>
+  <SmoothingExpanded.EnableChunkConstructionTooltip>Добавляет гладкие стены и полы из обломков основных типов камня, а с Odyssey — также из вакуумита. Каждая клетка стоит один подходящий необработанный обломок. Пока настройка выключена, элементы Архитектора скрыты.</SmoothingExpanded.EnableChunkConstructionTooltip>
+  <SmoothingExpanded.DisableChunkTitle>Отключить строительство из обломков</SmoothingExpanded.DisableChunkTitle>
+  <SmoothingExpanded.DisableChunkWarning>Строительство из обломков было выключено. Существующие поверхности из обломков останутся в сохранении. Перед удалением мода используйте «Подготовить загруженное сохранение к удалению», чтобы преобразовать их и отменить незавершённое строительство.\n\nПродолжить с отключённым строительством из обломков?</SmoothingExpanded.DisableChunkWarning>
+  <SmoothingExpanded.UninstallWarning>Поверхности с ванильным результатом безопасны при удалении мода. Разбираемые стены и снимаемые полы нужно предварительно преобразовать.</SmoothingExpanded.UninstallWarning>
+  <SmoothingExpanded.ChunkResultHeader>Результат строительства (требуется перезапуск)</SmoothingExpanded.ChunkResultHeader>
+  <SmoothingExpanded.ChunkResultConstructed>Из обломков: разбираемые стены и снимаемые полы (по умолчанию)</SmoothingExpanded.ChunkResultConstructed>
+  <SmoothingExpanded.ChunkResultNatural>Ванильный: добываемые стены и постоянные полы</SmoothingExpanded.ChunkResultNatural>
+  <SmoothingExpanded.ChunkResultBoth>Показывать оба типа результата</SmoothingExpanded.ChunkResultBoth>
+  <SmoothingExpanded.NaturalResultExplanation>Строительство с ванильным результатом расходует один обломок и обычный объём работы, затем становится настоящей ванильной гладкой поверхностью. Стены можно добывать, полы постоянны. Оба типа сохраняются после удаления мода.</SmoothingExpanded.NaturalResultExplanation>
+  <SmoothingExpanded.ChunkWealthHeader>Стоимость поверхностей из обломков</SmoothingExpanded.ChunkWealthHeader>
+  <SmoothingExpanded.ChunkWallWealth>Изменить стоимость стен (требуется перезапуск)</SmoothingExpanded.ChunkWallWealth>
+  <SmoothingExpanded.ChunkWallWealthTooltip>Если включено, все стены из обломков используют выбранное ниже значение. Если выключено, каждая использует стоимость соответствующей стены из каменных блоков.</SmoothingExpanded.ChunkWallWealthTooltip>
+  <SmoothingExpanded.ChunkWallWealthValue>Стоимость клетки стены из обломков: {0}</SmoothingExpanded.ChunkWallWealthValue>
+  <SmoothingExpanded.ChunkFloorWealthHarmony>Для стоимости полов требуется Harmony.</SmoothingExpanded.ChunkFloorWealthHarmony>
+  <SmoothingExpanded.ChunkFloorWealth>Изменить стоимость полов (требуется перезапуск)</SmoothingExpanded.ChunkFloorWealth>
+  <SmoothingExpanded.ChunkFloorWealthTooltip>Если включено, все полы из обломков используют выбранное ниже значение. Если выключено, каждый использует стоимость соответствующего каменного пола.</SmoothingExpanded.ChunkFloorWealthTooltip>
+  <SmoothingExpanded.ChunkFloorWealthValue>Стоимость клетки пола из обломков: {0}</SmoothingExpanded.ChunkFloorWealthValue>
+  <SmoothingExpanded.ChunkBeautyHeader>Красота поверхностей из обломков</SmoothingExpanded.ChunkBeautyHeader>
+  <SmoothingExpanded.ChunkWallBeauty>Изменить красоту стен (требуется перезапуск)</SmoothingExpanded.ChunkWallBeauty>
+  <SmoothingExpanded.ChunkWallBeautyTooltip>Если включено, все стены из обломков используют выбранное ниже значение. Если выключено, каждая соответствует ванильной гладкой стене из того же камня.</SmoothingExpanded.ChunkWallBeautyTooltip>
+  <SmoothingExpanded.ChunkWallBeautyValue>Красота стены из обломков: {0}</SmoothingExpanded.ChunkWallBeautyValue>
+  <SmoothingExpanded.ChunkFloorBeauty>Изменить красоту полов (требуется перезапуск)</SmoothingExpanded.ChunkFloorBeauty>
+  <SmoothingExpanded.ChunkFloorBeautyTooltip>Если включено, все полы из обломков используют выбранное ниже значение. Если выключено, каждый соответствует ванильному гладкому полу из того же камня.</SmoothingExpanded.ChunkFloorBeautyTooltip>
+  <SmoothingExpanded.ChunkFloorBeautyValue>Красота пола из обломков: {0}</SmoothingExpanded.ChunkFloorBeautyValue>
+  <SmoothingExpanded.ChunkConstructionExplanation>Исследования не требуются. Каждая клетка стоит один подходящий необработанный обломок и требует обычный объём работы для каменной стены или пола.</SmoothingExpanded.ChunkConstructionExplanation>
+  <SmoothingExpanded.UninstallExplanation>Преобразует завершённые стены и полы из обломков в ванильные гладкие аналоги. Также отменяет незавершённые чертежи и каркасы, возвращая доставленные ресурсы. Поверхности с ванильным результатом преобразовывать не нужно.</SmoothingExpanded.UninstallExplanation>
+  <SmoothingExpanded.PrepareUninstall>Подготовить загруженное сохранение к удалению</SmoothingExpanded.PrepareUninstall>
+  <SmoothingExpanded.LoadSaveTooltip>Сначала загрузите сохранение. Преобразование выполняется на всех картах этого сохранения.</SmoothingExpanded.LoadSaveTooltip>
+  <SmoothingExpanded.ResetAll>Сбросить все настройки</SmoothingExpanded.ResetAll>
+  <SmoothingExpanded.ResetTitle>Сбросить все настройки</SmoothingExpanded.ResetTitle>
+  <SmoothingExpanded.ResetWarning>Сброс всех настроек отключит строительство из обломков. Если в сохранении есть готовые пользовательские поверхности или незавершённое строительство, отмените действие и сначала используйте «Подготовить загруженное сохранение к удалению».\n\nВсё равно сбросить настройки?</SmoothingExpanded.ResetWarning>
+  <SmoothingExpanded.ConversionNeedsSave>Загрузите сохранение перед преобразованием поверхностей из обломков.</SmoothingExpanded.ConversionNeedsSave>
+  <SmoothingExpanded.ConversionTitle>Преобразовать поверхности из обломков</SmoothingExpanded.ConversionTitle>
+  <SmoothingExpanded.ConversionWarning>Преобразовать все гладкие стены и полы из обломков на всех загруженных картах?\n\nСтены станут добываемыми ванильными гладкими стенами. Полы станут постоянными ванильными гладкими полами. Незавершённые чертежи и каркасы будут отменены, а доставленные ресурсы возвращены. Автоматически отменить это действие нельзя. Сначала сделайте резервную копию.</SmoothingExpanded.ConversionWarning>
+  <SmoothingExpanded.ConversionReport>Преобразование завершено: преобразовано клеток пола — {0}, стен — {1}, загруженных карт — {2}; отменено незавершённых чертежей/каркасов — {3}. Настройки строительства из обломков сброшены; для обновления Архитектора перезапустите игру. Сохранитесь перед удалением мода.</SmoothingExpanded.ConversionReport>
+  <SmoothingExpanded.ConversionIncomplete>Подготовка к удалению не завершена: в сохранении осталось пользовательских поверхностей — {0}. Настройки не были сброшены. Не удаляйте мод; проверьте журнал ошибок и повторите попытку.</SmoothingExpanded.ConversionIncomplete>
+</LanguageData>

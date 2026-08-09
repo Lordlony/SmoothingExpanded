@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SmoothingExpanded_ChunkSmoothWalls</defName>
+    <label>chunk-built smooth wall</label>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SmoothingExpanded_ChunkSmoothFloors</defName>
+    <label>chunk-built smooth floor</label>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWalls</defName>
+    <label>vanilla smoothed wall</label>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloors</defName>
+    <label>vanilla smoothed floor</label>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <!--
+    Inspired by Core's Wall and Smoothed* rock ThingDefs. These definitions use
+    one matching raw chunk, retain normal wall construction behaviour, and are
+    configured from the live Core/modded definitions by ChunkConstructionController.
+  -->
+  <ThingDef Name="SmoothingExpanded_ChunkSmoothWallBase" ParentName="Wall" Abstract="True">
+    <description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</description>
+    <!-- These are player construction choices, not world-generation content.
+         Wall normally permits generic map-gen scattering, so opt this entire
+         inherited family out explicitly. -->
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags Inherit="False">
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+    <costStuffCount>0</costStuffCount>
+    <stuffCategories Inherit="False" />
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <designatorDropdown>SmoothingExpanded_ChunkSmoothWalls</designatorDropdown>
+    <!-- Use RimWorld's normal deconstruction return instead of forcing a full
+         refund. Dedicated refund mods can therefore control these walls. -->
+    <!-- Separate fixed-material defs otherwise appear as individual unlocks in
+         Stonecutting's research panel. The opt-in mod setting is the catalogue
+         gate; resources and construction work remain the balance costs. -->
+    <researchPrerequisites Inherit="False" />
+    <building>
+      <deconstructible>true</deconstructible>
+      <isWall>true</isWall>
+      <supportsWallAttachments>true</supportsWallAttachments>
+      <!-- Odyssey's wall information calculates airtightness from Stuff when
+           isStuffableAirtight is inherited. These walls use a fixed chunk
+           cost and therefore have no Stuff instance to inspect. Declare the
+           finished chunk-built wall directly non-airtight instead. -->
+      <isAirtight>false</isAirtight>
+      <isStuffableAirtight>false</isStuffableAirtight>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothWallSandstone</defName>
+    <label>chunk-built smooth sandstone wall</label>
+    <graphicData><color>(126,104,94)</color></graphicData>
+    <uiIconColor>(126,104,94)</uiIconColor>
+    <costList Inherit="False"><ChunkSandstone>1</ChunkSandstone></costList>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothWallGranite</defName>
+    <label>chunk-built smooth granite wall</label>
+    <graphicData><color>(105,95,97)</color></graphicData>
+    <uiIconColor>(105,95,97)</uiIconColor>
+    <costList Inherit="False"><ChunkGranite>1</ChunkGranite></costList>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothWallLimestone</defName>
+    <label>chunk-built smooth limestone wall</label>
+    <graphicData><color>(158,153,135)</color></graphicData>
+    <uiIconColor>(158,153,135)</uiIconColor>
+    <costList Inherit="False"><ChunkLimestone>1</ChunkLimestone></costList>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothWallSlate</defName>
+    <label>chunk-built smooth slate wall</label>
+    <graphicData><color>(100,100,100)</color></graphicData>
+    <uiIconColor>(100,100,100)</uiIconColor>
+    <costList Inherit="False"><ChunkSlate>1</ChunkSlate></costList>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothWallMarble</defName>
+    <label>chunk-built smooth marble wall</label>
+    <graphicData><color>(132,135,132)</color></graphicData>
+    <uiIconColor>(132,135,132)</uiIconColor>
+    <costList Inherit="False"><ChunkMarble>1</ChunkMarble></costList>
+  </ThingDef>
+
+  <!--
+    Inspired by Core's TileStoneBase. Work, research, construction skill,
+    deconstruction and dropdown behaviour are inherited from normal stone tile.
+    The live smoothed-floor texture/color and equivalent tile wealth are copied
+    at startup by ChunkConstructionController.
+  -->
+  <TerrainDef Name="SmoothingExpanded_ChunkSmoothFloorBase" ParentName="TileStoneBase" Abstract="True">
+    <description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</description>
+    <texturePath>Terrain/Surfaces/SmoothStone</texturePath>
+    <designatorDropdown>SmoothingExpanded_ChunkSmoothFloors</designatorDropdown>
+    <!-- Raw chunks need no cutting or shaping prerequisite before floor work. -->
+    <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+    <researchPrerequisites Inherit="False" />
+    <!-- Use RimWorld's normal deconstruction return instead of forcing a full
+         refund. Dedicated refund mods can therefore control these floors. -->
+  </TerrainDef>
+
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothFloorSandstone</defName>
+    <label>chunk-built smooth sandstone floor</label>
+    <color>(126,104,94)</color>
+    <costList Inherit="False"><ChunkSandstone>1</ChunkSandstone></costList>
+  </TerrainDef>
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothFloorGranite</defName>
+    <label>chunk-built smooth granite floor</label>
+    <color>(105,95,97)</color>
+    <costList Inherit="False"><ChunkGranite>1</ChunkGranite></costList>
+  </TerrainDef>
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothFloorLimestone</defName>
+    <label>chunk-built smooth limestone floor</label>
+    <color>(158,153,135)</color>
+    <costList Inherit="False"><ChunkLimestone>1</ChunkLimestone></costList>
+  </TerrainDef>
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothFloorSlate</defName>
+    <label>chunk-built smooth slate floor</label>
+    <!-- Natural smooth slate inherits the rock's darker Core colour. Set it in
+         XML so RimWorld's material cache never captures the lighter tile colour. -->
+    <color>(70,70,70)</color>
+    <costList Inherit="False"><ChunkSlate>1</ChunkSlate></costList>
+  </TerrainDef>
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothFloorMarble</defName>
+    <label>chunk-built smooth marble floor</label>
+    <color>(132,135,132)</color>
+    <costList Inherit="False"><ChunkMarble>1</ChunkMarble></costList>
+  </TerrainDef>
+
+  <!--
+    Natural-result construction uses short-lived building helpers rather than
+    custom terrains. This lets RimWorld charge one chunk and perform normal
+    construction work, after which NaturalSurfaceCompletionComponent replaces
+    the helper with the genuine vanilla smoothed asset. The result therefore
+    has vanilla blending, durability, mod compatibility and uninstall safety.
+  -->
+  <ThingDef Name="SmoothingExpanded_ChunkSmoothNaturalWallBase" ParentName="Wall" Abstract="True">
+    <thingClass>Lordlony.SmoothingExpanded.NaturalSurfaceConstructionProxy</thingClass>
+    <tickerType>Normal</tickerType>
+    <description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</description>
+    <!-- This short-lived construction proxy must only ever be created through
+         its player blueprint, never selected as generated map content. -->
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags Inherit="False"><li>Wall</li><li>Rock</li></linkFlags>
+    </graphicData>
+    <costStuffCount>0</costStuffCount>
+    <stuffCategories Inherit="False" />
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <designatorDropdown>SmoothingExpanded_ChunkSmoothNaturalWalls</designatorDropdown>
+    <researchPrerequisites Inherit="False" />
+    <building>
+      <!-- As with the constructed catalogue, this fixed-chunk helper is not
+           made from Stuff. Avoid Odyssey attempting a Stuff-based airtight
+           lookup while its blueprint, frame, or brief completed form exists. -->
+      <isAirtight>false</isAirtight>
+      <isStuffableAirtight>false</isStuffableAirtight>
+    </building>
+  </ThingDef>
+
+  <ThingDef Name="SmoothingExpanded_ChunkSmoothNaturalFloorBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Lordlony.SmoothingExpanded.NaturalSurfaceConstructionProxy</thingClass>
+    <tickerType>Normal</tickerType>
+    <category>Building</category>
+    <!-- A one-cell floor helper has no meaningful rotation. More importantly,
+         leaving this enabled makes RimWorld reserve Q/E for building rotation
+         instead of cycling the Floors draw-shape catalogue. -->
+    <rotatable>false</rotatable>
+    <!-- Blueprint and frame defs are generated before the settings controller
+         can show or hide Architect entries. Declaring Floors here ensures normal
+         construction receives a valid blueprint; the controller may safely set
+         the live category to null later when this result mode is disabled. -->
+    <designationCategory>Floors</designationCategory>
+    <!-- Match vanilla floor tools: drag paints a filled two-dimensional area
+         while every cell still receives its own one-chunk construction frame. -->
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <!-- A normal drawer is required so RimWorld generates blueprint/frame defs.
+         The completed helper exists for only one tick before becoming terrain. -->
+    <drawerType>MapMeshOnly</drawerType>
+    <graphicData>
+      <texPath>Terrain/Surfaces/SmoothStone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0</fillPercent>
+    <description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</description>
+    <uiIconPath>Terrain/Surfaces/SmoothStone</uiIconPath>
+    <!-- Do not ask the blueprint to draw the completed MapMeshOnly helper as
+         its ghost: MapMeshOnly has no realtime thing graphic, which leaves
+         only the selection outline. Use blueprintGraphicData below instead. -->
+    <useBlueprintGraphicAsGhost>false</useBlueprintGraphicAsGhost>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <costStuffCount>0</costStuffCount>
+    <stuffCategories Inherit="False" />
+    <designatorDropdown>SmoothingExpanded_ChunkSmoothNaturalFloors</designatorDropdown>
+    <researchPrerequisites Inherit="False" />
+    <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+    <building>
+      <isEdifice>false</isEdifice>
+      <!-- MapMeshOnly helpers need an explicit blueprint graphic. The generic
+           useBlueprintGraphicAsGhost flag alone can leave their empty blueprint
+           invisible until the frame receives its first delivered resource. -->
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Terrain/Surfaces/SmoothStone</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <!-- EdgeDetect renders only the thin placement outline for this
+             MapMeshOnly helper. Transparent keeps that outline while also
+             displaying the smooth-stone texture before resources arrive. -->
+        <shaderType>Transparent</shaderType>
+        <drawSize>(1,1)</drawSize>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallSandstone</defName><label>vanilla smoothed sandstone wall</label>
+    <costList Inherit="False"><ChunkSandstone>1</ChunkSandstone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedSandstone</wall></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallGranite</defName><label>vanilla smoothed granite wall</label>
+    <costList Inherit="False"><ChunkGranite>1</ChunkGranite></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedGranite</wall></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallLimestone</defName><label>vanilla smoothed limestone wall</label>
+    <costList Inherit="False"><ChunkLimestone>1</ChunkLimestone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedLimestone</wall></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallSlate</defName><label>vanilla smoothed slate wall</label>
+    <costList Inherit="False"><ChunkSlate>1</ChunkSlate></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedSlate</wall></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallMarble</defName><label>vanilla smoothed marble wall</label>
+    <costList Inherit="False"><ChunkMarble>1</ChunkMarble></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedMarble</wall></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorSandstone</defName><label>vanilla smoothed sandstone floor</label>
+    <costList Inherit="False"><ChunkSandstone>1</ChunkSandstone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Sandstone</floorStone></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorGranite</defName><label>vanilla smoothed granite floor</label>
+    <costList Inherit="False"><ChunkGranite>1</ChunkGranite></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Granite</floorStone></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorLimestone</defName><label>vanilla smoothed limestone floor</label>
+    <costList Inherit="False"><ChunkLimestone>1</ChunkLimestone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Limestone</floorStone></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorSlate</defName><label>vanilla smoothed slate floor</label>
+    <costList Inherit="False"><ChunkSlate>1</ChunkSlate></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Slate</floorStone></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorMarble</defName><label>vanilla smoothed marble floor</label>
+    <costList Inherit="False"><ChunkMarble>1</ChunkMarble></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Marble</floorStone></li></modExtensions>
+  </ThingDef>
+
+</Defs>

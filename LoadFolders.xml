@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.6>
+    <!-- The root contains the dependency-free main assembly. -->
+    <li>/</li>
+    <!-- Harmony integration is invisible to RimWorld unless Harmony is active. -->
+    <li IfModActive="brrainz.harmony">Optional/OptionalHarmony</li>
+    <!-- Define minification before implied install blueprints are generated. -->
+    <li IfModActive="erdelf.minifyeverything">Optional/OptionalMinifyEverything</li>
+    <!-- CCP depends on XML Extensions. Keeping this patch in a conditional
+         folder prevents Core-only games from resolving its external class. -->
+    <li IfModActive="cucumpear.stonetweaksvanilla">Optional/OptionalCCP</li>
+    <!-- Keep Odyssey-only translation injections out of Core-only games. -->
+    <li IfModActive="Ludeon.RimWorld.Odyssey">Optional/OptionalOdyssey</li>
+  </v1.6>
+</loadFolders>

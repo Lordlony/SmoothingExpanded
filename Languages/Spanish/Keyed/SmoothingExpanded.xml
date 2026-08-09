@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded.SettingsCategory>Smoothing Expanded</SmoothingExpanded.SettingsCategory>
+  <SmoothingExpanded.Section.Speed>Multiplicadores de velocidad</SmoothingExpanded.Section.Speed>
+  <SmoothingExpanded.Section.Natural>Muros y suelos alisados de Vanilla</SmoothingExpanded.Section.Natural>
+  <SmoothingExpanded.Section.Chunk>Muros y suelos alisados construidos con pedruscos</SmoothingExpanded.Section.Chunk>
+  <SmoothingExpanded.Section.Uninstall>Preparación de la partida y desinstalación segura</SmoothingExpanded.Section.Uninstall>
+  <SmoothingExpanded.Instant>Instantáneo</SmoothingExpanded.Instant>
+  <SmoothingExpanded.InstantValue>instantáneo</SmoothingExpanded.InstantValue>
+  <SmoothingExpanded.WallSpeed>Multiplicador de velocidad para alisar muros: {0}</SmoothingExpanded.WallSpeed>
+  <SmoothingExpanded.FloorSpeed>Multiplicador de velocidad para alisar suelos: {0}</SmoothingExpanded.FloorSpeed>
+  <SmoothingExpanded.InstantWallTooltip>Hace que el alisado sea prácticamente instantáneo. Desactivado por defecto porque es una opción similar a un truco.</SmoothingExpanded.InstantWallTooltip>
+  <SmoothingExpanded.InstantFloorTooltip>Hace que el alisado de suelos sea prácticamente instantáneo. Requiere Harmony. Por defecto: desactivado.</SmoothingExpanded.InstantFloorTooltip>
+  <SmoothingExpanded.SpeedExplanation>Vanilla usa 1x. El valor predeterminado de este mod es 2x. La habilidad de construcción, la manipulación, la vista y la velocidad de trabajo global siguen aplicándose con normalidad.</SmoothingExpanded.SpeedExplanation>
+  <SmoothingExpanded.ResetWallSpeed>Restablecer velocidad de muros a 2x</SmoothingExpanded.ResetWallSpeed>
+  <SmoothingExpanded.ResetFloorSpeed>Restablecer velocidad de suelos a 2x</SmoothingExpanded.ResetFloorSpeed>
+  <SmoothingExpanded.FloorSpeedHarmony>Harmony permite una velocidad independiente para los suelos. Sin él, los suelos usan la velocidad de los muros.</SmoothingExpanded.FloorSpeedHarmony>
+  <SmoothingExpanded.NaturalWealthHeader>Riqueza de superficies alisadas</SmoothingExpanded.NaturalWealthHeader>
+  <SmoothingExpanded.OverrideNaturalWallWealth>Sobrescribir la riqueza de los muros alisados de Vanilla (por defecto: no)</SmoothingExpanded.OverrideNaturalWallWealth>
+  <SmoothingExpanded.OverrideNaturalWallWealthTooltip>Los muros alisados de Vanilla detectados usarán el valor seleccionado abajo.</SmoothingExpanded.OverrideNaturalWallWealthTooltip>
+  <SmoothingExpanded.NaturalWallValue>Valor por casilla de muro alisado de Vanilla: {0}</SmoothingExpanded.NaturalWallValue>
+  <SmoothingExpanded.ResetWallWealth>Restablecer riqueza de muros (desactivada; valor 0)</SmoothingExpanded.ResetWallWealth>
+  <SmoothingExpanded.FloorWealthHarmony>Requiere Harmony.</SmoothingExpanded.FloorWealthHarmony>
+  <SmoothingExpanded.OverrideNaturalFloorWealth>Experimental: sobrescribir la riqueza de los suelos alisados de Vanilla (por defecto: no)</SmoothingExpanded.OverrideNaturalFloorWealth>
+  <SmoothingExpanded.OverrideNaturalFloorWealthTooltip>Ajusta la riqueza de suelos almacenada por RimWorld después de un recuento. Puede entrar en conflicto con mods que alteren la riqueza del mapa, de las incursiones o de los suelos.</SmoothingExpanded.OverrideNaturalFloorWealthTooltip>
+  <SmoothingExpanded.RequiresHarmonyTooltip>Requiere Harmony. La velocidad y la riqueza de los muros siguen disponibles sin él.</SmoothingExpanded.RequiresHarmonyTooltip>
+  <SmoothingExpanded.NaturalFloorValue>Valor por casilla de suelo alisado de Vanilla: {0}</SmoothingExpanded.NaturalFloorValue>
+  <SmoothingExpanded.FloorWealthWarning>Experimental; déjalo desactivado para obtener la máxima compatibilidad. Al estar desactivado, el ajuste se omite por completo.</SmoothingExpanded.FloorWealthWarning>
+  <SmoothingExpanded.ResetFloorWealth>Restablecer riqueza de suelos (desactivada; valor 0)</SmoothingExpanded.ResetFloorWealth>
+  <SmoothingExpanded.NaturalBeautyHeader>Belleza de superficies alisadas</SmoothingExpanded.NaturalBeautyHeader>
+  <SmoothingExpanded.RemoveNaturalWallBeauty>Sobrescribir la belleza de los muros (por defecto: no)</SmoothingExpanded.RemoveNaturalWallBeauty>
+  <SmoothingExpanded.RemoveNaturalWallBeautyTooltip>Los muros alisados de Vanilla detectados usarán el valor seleccionado abajo. Se aplica inmediatamente; no requiere Harmony.</SmoothingExpanded.RemoveNaturalWallBeautyTooltip>
+  <SmoothingExpanded.NaturalWallBeautyValue>Belleza del muro alisado de Vanilla: {0}</SmoothingExpanded.NaturalWallBeautyValue>
+  <SmoothingExpanded.RemoveNaturalFloorBeauty>Sobrescribir la belleza de los suelos (por defecto: no)</SmoothingExpanded.RemoveNaturalFloorBeauty>
+  <SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>Los suelos alisados de Vanilla detectados usarán el valor seleccionado abajo. Se aplica inmediatamente; no requiere Harmony.</SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>
+  <SmoothingExpanded.NaturalFloorBeautyValue>Belleza del suelo alisado de Vanilla: {0}</SmoothingExpanded.NaturalFloorBeautyValue>
+  <SmoothingExpanded.EnableChunkConstruction>Activar muros y suelos alisados construidos con pedruscos (requiere reinicio)</SmoothingExpanded.EnableChunkConstruction>
+  <SmoothingExpanded.EnableChunkConstructionTooltip>Añade muros y suelos alisados construidos con las piedras de Core y, con Odyssey, piedra del vacío. Cada casilla cuesta un pedrusco sin procesar del tipo correspondiente. Las opciones de Arquitecto permanecen ocultas mientras esté desactivado.</SmoothingExpanded.EnableChunkConstructionTooltip>
+  <SmoothingExpanded.DisableChunkTitle>Desactivar construcción con pedruscos</SmoothingExpanded.DisableChunkTitle>
+  <SmoothingExpanded.DisableChunkWarning>Se ha desactivado la construcción con pedruscos. Las superficies existentes permanecerán en la partida. Antes de desinstalar el mod, usa «Preparar la partida cargada para desinstalar» para convertirlas y cancelar las construcciones sin terminar.\n\n¿Continuar con la construcción con pedruscos desactivada?</SmoothingExpanded.DisableChunkWarning>
+  <SmoothingExpanded.UninstallWarning>Las superficies con resultado Vanilla son seguras al desinstalar. Los muros desmontables y los suelos retirables deben convertirse antes de eliminar este mod.</SmoothingExpanded.UninstallWarning>
+  <SmoothingExpanded.ChunkResultHeader>Resultado de construcción (requiere reinicio)</SmoothingExpanded.ChunkResultHeader>
+  <SmoothingExpanded.ChunkResultConstructed>Con pedruscos: muros desmontables y suelos retirables (predeterminado)</SmoothingExpanded.ChunkResultConstructed>
+  <SmoothingExpanded.ChunkResultNatural>Vanilla: muros extraíbles y suelos permanentes</SmoothingExpanded.ChunkResultNatural>
+  <SmoothingExpanded.ChunkResultBoth>Mostrar ambos tipos de resultado</SmoothingExpanded.ChunkResultBoth>
+  <SmoothingExpanded.NaturalResultExplanation>La construcción con resultado Vanilla consume un pedrusco y el trabajo normal, y luego se convierte en una superficie alisada auténtica de Vanilla. Los muros se pueden extraer; los suelos son permanentes. Ambos permanecen si se elimina este mod.</SmoothingExpanded.NaturalResultExplanation>
+  <SmoothingExpanded.ChunkWealthHeader>Riqueza de superficies construidas con pedruscos</SmoothingExpanded.ChunkWealthHeader>
+  <SmoothingExpanded.ChunkWallWealth>Sobrescribir riqueza de muros (requiere reinicio)</SmoothingExpanded.ChunkWallWealth>
+  <SmoothingExpanded.ChunkWallWealthTooltip>Al activarlo, todos los muros construidos con pedruscos usarán el valor seleccionado abajo. Al desactivarlo, cada uno usará el valor del muro equivalente de bloques de piedra.</SmoothingExpanded.ChunkWallWealthTooltip>
+  <SmoothingExpanded.ChunkWallWealthValue>Riqueza por casilla de muro construido con pedruscos: {0}</SmoothingExpanded.ChunkWallWealthValue>
+  <SmoothingExpanded.ChunkFloorWealthHarmony>La riqueza de los suelos requiere Harmony.</SmoothingExpanded.ChunkFloorWealthHarmony>
+  <SmoothingExpanded.ChunkFloorWealth>Sobrescribir riqueza de suelos (requiere reinicio)</SmoothingExpanded.ChunkFloorWealth>
+  <SmoothingExpanded.ChunkFloorWealthTooltip>Al activarlo, todos los suelos construidos con pedruscos usarán el valor seleccionado abajo. Al desactivarlo, cada uno usará el valor del suelo de piedra equivalente.</SmoothingExpanded.ChunkFloorWealthTooltip>
+  <SmoothingExpanded.ChunkFloorWealthValue>Riqueza por casilla de suelo construido con pedruscos: {0}</SmoothingExpanded.ChunkFloorWealthValue>
+  <SmoothingExpanded.ChunkBeautyHeader>Belleza de superficies construidas con pedruscos</SmoothingExpanded.ChunkBeautyHeader>
+  <SmoothingExpanded.ChunkWallBeauty>Sobrescribir belleza de muros (requiere reinicio)</SmoothingExpanded.ChunkWallBeauty>
+  <SmoothingExpanded.ChunkWallBeautyTooltip>Al activarlo, todos los muros construidos con pedruscos usarán el valor seleccionado abajo. Al desactivarlo, cada uno coincidirá con su muro alisado equivalente de Vanilla.</SmoothingExpanded.ChunkWallBeautyTooltip>
+  <SmoothingExpanded.ChunkWallBeautyValue>Belleza del muro construido con pedruscos: {0}</SmoothingExpanded.ChunkWallBeautyValue>
+  <SmoothingExpanded.ChunkFloorBeauty>Sobrescribir belleza de suelos (requiere reinicio)</SmoothingExpanded.ChunkFloorBeauty>
+  <SmoothingExpanded.ChunkFloorBeautyTooltip>Al activarlo, todos los suelos construidos con pedruscos usarán el valor seleccionado abajo. Al desactivarlo, cada uno coincidirá con su suelo alisado equivalente de Vanilla.</SmoothingExpanded.ChunkFloorBeautyTooltip>
+  <SmoothingExpanded.ChunkFloorBeautyValue>Belleza del suelo construido con pedruscos: {0}</SmoothingExpanded.ChunkFloorBeautyValue>
+  <SmoothingExpanded.ChunkConstructionExplanation>No requiere investigación. Cada casilla cuesta un pedrusco sin procesar del tipo correspondiente y usa el trabajo normal de construcción de un muro o suelo de piedra.</SmoothingExpanded.ChunkConstructionExplanation>
+  <SmoothingExpanded.UninstallExplanation>Convierte los muros y suelos terminados construidos con pedruscos en sus equivalentes alisados de Vanilla. También cancela planos y estructuras sin terminar y devuelve los recursos entregados. Las superficies con resultado Vanilla no necesitan conversión.</SmoothingExpanded.UninstallExplanation>
+  <SmoothingExpanded.PrepareUninstall>Preparar la partida cargada para desinstalar</SmoothingExpanded.PrepareUninstall>
+  <SmoothingExpanded.LoadSaveTooltip>Carga primero una partida. La conversión se aplica a todos los mapas de la partida cargada.</SmoothingExpanded.LoadSaveTooltip>
+  <SmoothingExpanded.ResetAll>Restablecer todos los ajustes</SmoothingExpanded.ResetAll>
+  <SmoothingExpanded.ResetTitle>Restablecer todos los ajustes</SmoothingExpanded.ResetTitle>
+  <SmoothingExpanded.ResetWarning>Restablecer todos los ajustes desactivará la construcción con pedruscos. Si esta partida contiene superficies personalizadas terminadas o construcciones sin acabar, cancela y usa primero «Preparar la partida cargada para desinstalar».\n\n¿Restablecer todos los ajustes de todos modos?</SmoothingExpanded.ResetWarning>
+  <SmoothingExpanded.ConversionNeedsSave>Carga una partida antes de convertir las superficies construidas con pedruscos.</SmoothingExpanded.ConversionNeedsSave>
+  <SmoothingExpanded.ConversionTitle>Convertir superficies construidas con pedruscos</SmoothingExpanded.ConversionTitle>
+  <SmoothingExpanded.ConversionWarning>¿Convertir todos los muros y suelos alisados construidos con pedruscos en todos los mapas cargados?\n\nLos muros se convertirán en muros alisados de Vanilla que se pueden extraer. Los suelos se convertirán en suelos alisados permanentes de Vanilla. Los planos y estructuras sin terminar se cancelarán y se devolverán los recursos entregados. La acción no se puede revertir automáticamente. Haz antes una copia de seguridad.</SmoothingExpanded.ConversionWarning>
+  <SmoothingExpanded.ConversionReport>Conversión completada: {0} casilla(s) de suelo y {1} muro(s) convertidos en {2} mapa(s) cargado(s); {3} plano(s)/estructura(s) sin terminar cancelados. Los ajustes de construcción con pedruscos se restablecieron; reinicia para actualizar Arquitecto. Guarda antes de eliminar el mod.</SmoothingExpanded.ConversionReport>
+  <SmoothingExpanded.ConversionIncomplete>La preparación para desinstalar está incompleta: quedan {0} superficie(s) personalizadas en la partida. Los ajustes no se restablecieron. No elimines el mod; revisa el registro de errores e inténtalo de nuevo.</SmoothingExpanded.ConversionIncomplete>
+</LanguageData>

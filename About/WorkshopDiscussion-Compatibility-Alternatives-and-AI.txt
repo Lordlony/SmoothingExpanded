@@ -1,0 +1,87 @@
+[h1]Expanded compatibility, alternatives and development disclosure[/h1]
+
+This post contains the longer notes that would not fit within Steam's Workshop description limit. None of the mods below are required unless explicitly stated otherwise.
+
+[h2]Detailed compatibility notes[/h2]
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url][/b]
+
+Harmony is optional, not a required dependency. Without it, wall smoothing speed, wall wealth controls and chunk construction remain available. Floors follow the wall speed. Independent floor speed, floor instant mode and floor-wealth controls require Harmony and are disabled when it is unavailable.
+
+The experimental floor-wealth adjustments are opt-in and skipped completely while unchecked. They may overlap with mods that replace map-wealth or raid-point calculations. Natural smoothed terrain is handled separately from normal constructed-floor wealth, so broad floor-wealth settings do not necessarily affect it. For example, [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2633406344]Niilo's QoL[/url]'s general floor-wealth option does not currently cover natural smoothed stone.
+
+[b]Chunk-built and vanilla results[/b]
+
+Vanilla-result construction becomes the genuine vanilla smoothed wall or terrain after completion. It therefore inherits most changes made to vanilla assets and offers the broadest graphical compatibility. It has vanilla durability and blending, survives removal of this mod, and cannot return the construction chunk.
+
+Chunk-built surfaces remain separate definitions so that RimWorld can treat them as player-built objects. Mods that directly replace vanilla terrain materials, textures, architect categories, wealth calculations or smoothing work may require a specific compatibility patch.
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3563882422]Better Architect Menu[/url][/b]
+
+Its specialised Floors screen discovers TerrainDefs differently from RimWorld's normal Architect menu and does not ordinarily include Smoothing Expanded's short-lived vanilla-result construction proxies. A narrow Harmony patch filters only this mod's floor entries according to the selected construction mode and adds enabled vanilla-result proxies. [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3697920753]Architect Menu Optimizer[/url] needs no separate patch.
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=872762753]MinifyEverything[/url][/b]
+
+Conditional definition support gives constructed chunk-built walls proper install blueprints and normal Reinstall at another location behaviour. Other minification systems may also make the walls movable according to their own settings.
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url][/b]
+
+Explicit conditional support is included without making it a dependency. Its Unsmooth order converts Smoothing Expanded's chunk-built walls and floors into matching vanilla rough walls or terrain. The construction chunk is not refunded during this conversion.
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1524681306]CCP's Stone Tweaks Vanilla[/url][/b]
+
+The five Core chunk-built floors read CCP's configured stone colours. Other texture or material replacements may still require their own compatibility patch. Vacstone is unaffected because CCP covers the five Core stones.
+
+[b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url][/b]
+
+No special patch is needed. Smoothing Expanded deliberately uses RimWorld's ordinary deconstruction-return system, so this and similar refund mods can control material returns.
+
+[b]Odyssey[/b]
+
+Vacstone construction is added automatically when Odyssey is active. Odyssey is otherwise optional. Jade, obsidian and ice are not added because this mod reuses existing smooth-stone relationships rather than inventing new resource chains.
+
+[b]Additional stone mods[/b]
+
+Automatic generation was deliberately avoided. Inferring safe walls, floors, chunks, graphics, beauty, research and conversion relationships from arbitrary modded resources would be error-prone. Additional materials are better supported through targeted patches after a real use case is reported.
+
+[h2]Companion mods[/h2]
+
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1524681306]CCP's Stone Tweaks Vanilla[/url] - configurable Core stone colours and balance. Explicit colour compatibility is included for the five Core chunk-built floors.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url] - adds the reverse job for returning smooth surfaces to rough vanilla equivalents. Explicit chunk-built support is included.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url] - useful for deterministic or more generous returns. Smoothing Expanded leaves refunds to RimWorld and mods like this one.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3461137081]Visible Wealth[/url] - useful for checking surface wealth. It may classify custom walls or floors under different headings, but their displayed values remain useful.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3261302741]Smarter Deconstruction and Mining (Continued)[/url] - helps avoid roof collapses while reshaping mountain bases. It changes mining and deconstruction safety rather than smoothing.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=761421485]Allow Tool[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=730936602]Achtung![/url] - broader designation and manual-priority tools for large smoothing or rebuilding projects.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2432348514]Rock and Stone[/url] - broader chunk-based rock construction, including rough and smooth options. It overlaps with the chunk-built catalogue but pairs well when Smoothing Expanded is used mainly for natural speed, wealth and beauty controls.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2633406344]Niilo's QoL[/url] - its optional wall-before-floor smoothing behaviour complements separate speed controls. Avoid enabling overlapping settings when another mod already owns the same behaviour.
+[/list]
+
+For the smallest setup, Core plus Smoothing Expanded is sufficient. Add companion mods only for features you want; broad QoL collections may overlap with one another even when each is individually compatible.
+
+[h2]Independently developed alternatives[/h2]
+
+If you prefer smaller independent mods, a different balance approach, or an alternative without this project's disclosed AI-assisted development, consider:
+
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3225798144]Smooth Walls and Floors[/url] - buildable smooth walls and floors using a different balance and compatibility approach.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1986348112]Smooth Walls[/url] - a focused option for buildable smooth-looking walls.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2432348514]Rock and Stone[/url] - rock walls and floors built from chunks, including separate smooth versions.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2633406344]Niilo's QoL[/url] - adjustable general floor wealth and wall-before-floor smoothing among many unrelated QoL features. Its wealth option does not currently cover natural smoothed terrain.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url] - a complementary reverse-smoothing feature.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url] - material-return controls that work with chunk-built surfaces.
+[/list]
+
+These are not necessarily exact substitutes. Check their pages for current game support, dependencies and compatibility. No claim is made about another author's development methods unless stated by that author.
+
+[h2]AI-assisted development disclosure[/h2]
+
+Smoothing Expanded was developed with substantial assistance from OpenAI Codex. Its concept, direction, feature choices, repeated in-game testing and final decisions remained human-led. The AI assistance is disclosed because users should be able to make an informed choice about what they install.
+
+AI can be extraordinarily useful and appealing; this project is a small example of why people are tempted to use it. I do not support a blanket ban on the technology, but enthusiasm for its benefits should not obscure its risks. Its development and use need strong, enforceable safeguards that protect people, creative work and society, with transparency, human oversight and accountability when harm occurs.
+
+For a broader international framework, see the [url=https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence?hub=66973]UNESCO Recommendation on the Ethics of Artificial Intelligence[/url].
+
+[h2]Reporting compatibility problems[/h2]
+
+Please include the affected mod's name, active mod list, Player.log, stone type, whether the surface was Vanilla or Chunk-built, and the selected construction-result mode. A load-order change will not necessarily fix a definition, graphic or material incompatibility.

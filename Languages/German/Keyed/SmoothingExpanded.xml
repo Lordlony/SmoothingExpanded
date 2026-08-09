@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Erste deutsche Übersetzung. Korrekturen durch Muttersprachler sind willkommen. -->
+  <!-- Preserve the Workshop name for recognition, followed by a natural German explanation. -->
+  <SmoothingExpanded.SettingsCategory>Smoothing Expanded – Erweitertes Glätten</SmoothingExpanded.SettingsCategory>
+  <SmoothingExpanded.Section.Speed>Geschwindigkeitsmultiplikatoren</SmoothingExpanded.Section.Speed>
+  <SmoothingExpanded.Section.Natural>Geglättete Vanilla-Wände und -Böden</SmoothingExpanded.Section.Natural>
+  <SmoothingExpanded.Section.Chunk>Geglättete Wände und Böden aus Brocken</SmoothingExpanded.Section.Chunk>
+  <SmoothingExpanded.Section.Uninstall>Spielstandvorbereitung und sichere Deinstallation</SmoothingExpanded.Section.Uninstall>
+  <SmoothingExpanded.Instant>Sofort</SmoothingExpanded.Instant>
+  <SmoothingExpanded.InstantValue>sofort</SmoothingExpanded.InstantValue>
+  <SmoothingExpanded.WallSpeed>Geschwindigkeitsmultiplikator für das Glätten von Wänden: {0}</SmoothingExpanded.WallSpeed>
+  <SmoothingExpanded.FloorSpeed>Geschwindigkeitsmultiplikator für das Glätten von Böden: {0}</SmoothingExpanded.FloorSpeed>
+  <SmoothingExpanded.InstantWallTooltip>Macht das Glätten praktisch sofort fertig. Standardmäßig deaktiviert, da dies eine schummelartige Option ist.</SmoothingExpanded.InstantWallTooltip>
+  <SmoothingExpanded.InstantFloorTooltip>Macht das Glätten von Böden praktisch sofort fertig. Benötigt Harmony. Standard: aus.</SmoothingExpanded.InstantFloorTooltip>
+  <SmoothingExpanded.SpeedExplanation>Vanilla entspricht 1x. Der Standardwert dieser Mod ist 2x. Baufertigkeit, Manipulation, Sehvermögen und globale Arbeitsgeschwindigkeit gelten weiterhin wie gewohnt.</SmoothingExpanded.SpeedExplanation>
+  <SmoothingExpanded.ResetWallSpeed>Wandgeschwindigkeit auf 2x zurücksetzen</SmoothingExpanded.ResetWallSpeed>
+  <SmoothingExpanded.ResetFloorSpeed>Bodengeschwindigkeit auf 2x zurücksetzen</SmoothingExpanded.ResetFloorSpeed>
+  <SmoothingExpanded.FloorSpeedHarmony>Harmony: ermöglicht eine getrennte Bodengeschwindigkeit. Ohne Harmony gilt die Wandgeschwindigkeit.</SmoothingExpanded.FloorSpeedHarmony>
+  <SmoothingExpanded.NaturalWealthHeader>Wert geglätteter Oberflächen</SmoothingExpanded.NaturalWealthHeader>
+  <SmoothingExpanded.OverrideNaturalWallWealth>Wert geglätteter Vanilla-Wände überschreiben (Standard: aus)</SmoothingExpanded.OverrideNaturalWallWealth>
+  <SmoothingExpanded.OverrideNaturalWallWealthTooltip>Erkannte geglättete Vanilla-Wände verwenden den unten gewählten Wert.</SmoothingExpanded.OverrideNaturalWallWealthTooltip>
+  <SmoothingExpanded.NaturalWallValue>Wert geglätteter Vanilla-Wände pro Feld: {0}</SmoothingExpanded.NaturalWallValue>
+  <SmoothingExpanded.ResetWallWealth>Wandwert zurücksetzen (aus; Wert 0)</SmoothingExpanded.ResetWallWealth>
+  <SmoothingExpanded.FloorWealthHarmony>Benötigt Harmony.</SmoothingExpanded.FloorWealthHarmony>
+  <SmoothingExpanded.OverrideNaturalFloorWealth>Experimentell: Wert geglätteter Vanilla-Böden überschreiben (Standard: aus)</SmoothingExpanded.OverrideNaturalFloorWealth>
+  <SmoothingExpanded.OverrideNaturalFloorWealthTooltip>Passt RimWorlds zwischengespeicherten Gesamtwert der Böden nach einer Neuberechnung an. Kann mit Mods in Konflikt geraten, die Kartenwert, Überfallstärke oder Bodenbewertung verändern.</SmoothingExpanded.OverrideNaturalFloorWealthTooltip>
+  <SmoothingExpanded.RequiresHarmonyTooltip>Benötigt Harmony. Wandgeschwindigkeit und Wandwert bleiben ohne Harmony verfügbar.</SmoothingExpanded.RequiresHarmonyTooltip>
+  <SmoothingExpanded.NaturalFloorValue>Wert geglätteter Vanilla-Böden pro Feld: {0}</SmoothingExpanded.NaturalFloorValue>
+  <SmoothingExpanded.FloorWealthWarning>Warnung: experimentell; für bestmögliche Kompatibilität wird AUS empfohlen. Wenn deaktiviert, wird die Anpassung vollständig übersprungen.</SmoothingExpanded.FloorWealthWarning>
+  <SmoothingExpanded.ResetFloorWealth>Bodenwert auf Standard zurücksetzen (aus, Wert 0)</SmoothingExpanded.ResetFloorWealth>
+  <SmoothingExpanded.NaturalBeautyHeader>Schönheit geglätteter Oberflächen</SmoothingExpanded.NaturalBeautyHeader>
+  <SmoothingExpanded.RemoveNaturalWallBeauty>Wandschönheit überschreiben (Standard: aus)</SmoothingExpanded.RemoveNaturalWallBeauty>
+  <SmoothingExpanded.RemoveNaturalWallBeautyTooltip>Erkannte geglättete Vanilla-Wände verwenden den unten gewählten Wert. Gilt sofort; kein Harmony erforderlich.</SmoothingExpanded.RemoveNaturalWallBeautyTooltip>
+  <SmoothingExpanded.NaturalWallBeautyValue>Schönheit geglätteter Vanilla-Wände: {0}</SmoothingExpanded.NaturalWallBeautyValue>
+  <SmoothingExpanded.RemoveNaturalFloorBeauty>Bodenschönheit überschreiben (Standard: aus)</SmoothingExpanded.RemoveNaturalFloorBeauty>
+  <SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>Erkannte geglättete Vanilla-Böden verwenden den unten gewählten Wert. Gilt sofort; kein Harmony erforderlich.</SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>
+  <SmoothingExpanded.NaturalFloorBeautyValue>Schönheit geglätteter Vanilla-Böden: {0}</SmoothingExpanded.NaturalFloorBeautyValue>
+  <SmoothingExpanded.EnableChunkConstruction>Glatte Steinwände und -böden aus Brocken aktivieren (Neustart erforderlich)</SmoothingExpanded.EnableChunkConstruction>
+  <SmoothingExpanded.EnableChunkConstructionTooltip>Fügt glatte, aus Brocken gebaute Wände und Böden für Core-Gestein sowie Vakuumstein bei aktivem Odyssey hinzu. Jedes Feld kostet einen passenden rohen Brocken. Die Definitionen bleiben zur Sicherheit von Spielständen installiert, Architekt-Einträge werden bei Deaktivierung jedoch ausgeblendet.</SmoothingExpanded.EnableChunkConstructionTooltip>
+  <SmoothingExpanded.DisableChunkTitle>Bauen aus Brocken deaktivieren</SmoothingExpanded.DisableChunkTitle>
+  <SmoothingExpanded.DisableChunkWarning>Das Bauen aus Brocken wurde ausgeschaltet. Vor der Deaktivierung und insbesondere vor der Deinstallation dieser Mod solltest du „Geladenen Spielstand für Deinstallation vorbereiten“ verwenden, um fertige benutzerdefinierte Oberflächen umzuwandeln und unfertige Baupläne oder Rahmen abzubrechen.\n\nMit deaktiviertem Bauen aus Brocken fortfahren? Vorhandene Oberflächen bleiben ohne Vorbereitung im Spielstand.</SmoothingExpanded.DisableChunkWarning>
+  <SmoothingExpanded.UninstallWarning>Deinstallationswarnung: Oberflächen mit natürlichem Ergebnis sind bereits Vanilla und sicher. Gebaute/zerlegbare Oberflächen müssen vor dem Entfernen dieser Mod mit dem folgenden Werkzeug umgewandelt werden.</SmoothingExpanded.UninstallWarning>
+  <SmoothingExpanded.ChunkResultHeader>Bauergebnis (Neustart erforderlich)</SmoothingExpanded.ChunkResultHeader>
+  <SmoothingExpanded.ChunkResultConstructed>Aus Brocken: zerlegbare Wände und entfernbare Böden (Standard)</SmoothingExpanded.ChunkResultConstructed>
+  <SmoothingExpanded.ChunkResultNatural>Vanilla: abbaubare Wände und dauerhafte Böden</SmoothingExpanded.ChunkResultNatural>
+  <SmoothingExpanded.ChunkResultBoth>Beide Ergebnistypen anzeigen</SmoothingExpanded.ChunkResultBoth>
+  <SmoothingExpanded.NaturalResultExplanation>Das Vanilla-Ergebnis verbraucht einen Brocken und die normale Arbeit. Danach entsteht eine echte geglättete Vanilla-Oberfläche. Wände sind abbaubar; Böden sind dauerhaft. Beide bleiben ohne diese Mod erhalten.</SmoothingExpanded.NaturalResultExplanation>
+  <SmoothingExpanded.ChunkWealthHeader>Wert der Oberflächen aus Brocken</SmoothingExpanded.ChunkWealthHeader>
+  <SmoothingExpanded.ChunkWallWealth>Wandwert überschreiben (Neustart erforderlich)</SmoothingExpanded.ChunkWallWealth>
+  <SmoothingExpanded.ChunkWallWealthTooltip>Wenn aktiviert, verwenden alle Wände aus Brocken den unten gewählten Wert. Sonst gilt der Wert der jeweiligen Steinblockwand.</SmoothingExpanded.ChunkWallWealthTooltip>
+  <SmoothingExpanded.ChunkWallWealthValue>Wert der Wände aus Brocken pro Feld: {0}</SmoothingExpanded.ChunkWallWealthValue>
+  <SmoothingExpanded.ChunkFloorWealthHarmony>Bodenwert benötigt Harmony.</SmoothingExpanded.ChunkFloorWealthHarmony>
+  <SmoothingExpanded.ChunkFloorWealth>Bodenwert überschreiben (Neustart erforderlich)</SmoothingExpanded.ChunkFloorWealth>
+  <SmoothingExpanded.ChunkFloorWealthTooltip>Wenn aktiviert, verwenden alle Böden aus Brocken den unten gewählten Wert. Sonst gilt der Wert des jeweiligen Steinbodens.</SmoothingExpanded.ChunkFloorWealthTooltip>
+  <SmoothingExpanded.ChunkFloorWealthValue>Wert der Böden aus Brocken pro Feld: {0}</SmoothingExpanded.ChunkFloorWealthValue>
+  <SmoothingExpanded.ChunkBeautyHeader>Schönheit der Oberflächen aus Brocken</SmoothingExpanded.ChunkBeautyHeader>
+  <SmoothingExpanded.ChunkWallBeauty>Wandschönheit überschreiben (Neustart erforderlich)</SmoothingExpanded.ChunkWallBeauty>
+  <SmoothingExpanded.ChunkWallBeautyTooltip>Wenn aktiviert, verwenden alle Wände aus Brocken den unten gewählten Wert. Sonst entspricht jede ihrer geglätteten Vanilla-Wand.</SmoothingExpanded.ChunkWallBeautyTooltip>
+  <SmoothingExpanded.ChunkWallBeautyValue>Schönheit der Wände aus Brocken: {0}</SmoothingExpanded.ChunkWallBeautyValue>
+  <SmoothingExpanded.ChunkFloorBeauty>Bodenschönheit überschreiben (Neustart erforderlich)</SmoothingExpanded.ChunkFloorBeauty>
+  <SmoothingExpanded.ChunkFloorBeautyTooltip>Wenn aktiviert, verwenden alle Böden aus Brocken den unten gewählten Wert. Sonst entspricht jeder seinem geglätteten Vanilla-Boden.</SmoothingExpanded.ChunkFloorBeautyTooltip>
+  <SmoothingExpanded.ChunkFloorBeautyValue>Schönheit der Böden aus Brocken: {0}</SmoothingExpanded.ChunkFloorBeautyValue>
+  <SmoothingExpanded.ChunkConstructionExplanation>Keine Forschung erforderlich. Jedes Feld kostet einen passenden rohen Brocken und benötigt die normale Bauarbeit einer Steinwand bzw. eines Steinbodens.</SmoothingExpanded.ChunkConstructionExplanation>
+  <SmoothingExpanded.UninstallExplanation>Wandelt fertige benutzerdefinierte Böden und Wände in ihre natürlichen geglätteten Vanilla-Entsprechungen um und bricht alle unfertigen Baupläne oder Rahmen aus Brocken ab. Vor der Deinstallation verwenden; fertige Oberflächen mit natürlichem Ergebnis müssen nicht umgewandelt werden.</SmoothingExpanded.UninstallExplanation>
+  <SmoothingExpanded.PrepareUninstall>Geladenen Spielstand für Deinstallation vorbereiten</SmoothingExpanded.PrepareUninstall>
+  <SmoothingExpanded.LoadSaveTooltip>Lade zuerst einen Spielstand. Die Umwandlung gilt für alle Karten, die derzeit von diesem Spielstand geladen sind.</SmoothingExpanded.LoadSaveTooltip>
+  <SmoothingExpanded.ResetAll>Alle Einstellungen auf Standardwerte zurücksetzen</SmoothingExpanded.ResetAll>
+  <SmoothingExpanded.ResetTitle>Alle Einstellungen zurücksetzen</SmoothingExpanded.ResetTitle>
+  <SmoothingExpanded.ResetWarning>Durch das Zurücksetzen aller Einstellungen wird das Bauen aus Brocken deaktiviert. Falls dieser Spielstand fertige benutzerdefinierte Oberflächen oder unfertige Bauten enthält, brich ab und verwende zuerst „Geladenen Spielstand für Deinstallation vorbereiten“.\n\nTrotzdem alle Einstellungen zurücksetzen?</SmoothingExpanded.ResetWarning>
+
+  <SmoothingExpanded.ConversionNeedsSave>Lade vor der Umwandlung von Oberflächen aus Brocken einen Spielstand.</SmoothingExpanded.ConversionNeedsSave>
+  <SmoothingExpanded.ConversionTitle>Oberflächen aus Brocken umwandeln</SmoothingExpanded.ConversionTitle>
+  <SmoothingExpanded.ConversionWarning>Alle glatten Böden und Wände aus Brocken auf sämtlichen geladenen Karten umwandeln?\n\nBöden und Wände werden zu ihren jeweiligen natürlichen geglätteten Vanilla-Entsprechungen. Alle unfertigen Baupläne oder Rahmen aus Brocken werden abgebrochen und bereits gelieferte Ressourcen zurückgegeben. Dadurch wird der Spielstand verändert; dies kann nicht automatisch rückgängig gemacht werden. Erstelle zuerst eine Sicherung.</SmoothingExpanded.ConversionWarning>
+  <SmoothingExpanded.ConversionReport>Umwandlung abgeschlossen: {0} Bodenfeld(er) und {1} Wand/Wände auf {2} geladener/geladenen Karte(n) umgewandelt; {3} unfertige(r) Bauplan/-pläne bzw. Rahmen abgebrochen. Die Einstellungen für das Bauen aus Brocken wurden auf Standardwerte zurückgesetzt; starte neu, um die Sichtbarkeit im Architektenmenü zu aktualisieren. Speichere vor dem Entfernen der Mod.</SmoothingExpanded.ConversionReport>
+  <SmoothingExpanded.ConversionIncomplete>Die Vorbereitung zur Deinstallation ist unvollständig: {0} benutzerdefinierte Oberfläche(n) verbleiben im Spielstand. Die Einstellungen wurden nicht zurückgesetzt. Entferne die Mod nicht; prüfe das Fehlerprotokoll und versuche es erneut.</SmoothingExpanded.ConversionIncomplete>
+</LanguageData>

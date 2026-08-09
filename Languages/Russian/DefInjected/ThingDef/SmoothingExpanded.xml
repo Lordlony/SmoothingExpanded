@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.label>гладкая стена из обломка песчаника</SmoothingExpanded_ChunkSmoothWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothWallGranite.label>гладкая стена из обломка гранита</SmoothingExpanded_ChunkSmoothWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.label>гладкая стена из обломка известняка</SmoothingExpanded_ChunkSmoothWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothWallSlate.label>гладкая стена из обломка сланца</SmoothingExpanded_ChunkSmoothWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothWallMarble.label>гладкая стена из обломка мрамора</SmoothingExpanded_ChunkSmoothWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothWallGranite.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothWallSlate.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothWallMarble.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallMarble.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>ванильная гладкая стена из песчаника</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>ванильная гладкая стена из гранита</SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>ванильная гладкая стена из известняка</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>ванильная гладкая стена из сланца</SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>ванильная гладкая стена из мрамора</SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>ванильный гладкий пол из песчаника</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>ванильный гладкий пол из гранита</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>ванильный гладкий пол из известняка</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>ванильный гладкий пол из сланца</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>ванильный гладкий пол из мрамора</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>
+</LanguageData>

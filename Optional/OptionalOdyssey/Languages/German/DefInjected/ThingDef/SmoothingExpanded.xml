@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.label>aus Brocken gebaute glatte Vakuumsteinwand</SmoothingExpanded_ChunkSmoothWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>geglättete Vanilla-Vakuumsteinwand</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>geglätteter Vanilla-Vakuumsteinboden</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>
+</LanguageData>

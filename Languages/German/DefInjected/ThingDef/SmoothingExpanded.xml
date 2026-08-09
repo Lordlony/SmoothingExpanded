@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.label>aus Brocken gebaute glatte Sandsteinwand</SmoothingExpanded_ChunkSmoothWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothWallGranite.label>aus Brocken gebaute glatte Granitwand</SmoothingExpanded_ChunkSmoothWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.label>aus Brocken gebaute glatte Kalksteinwand</SmoothingExpanded_ChunkSmoothWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothWallSlate.label>aus Brocken gebaute glatte Schieferwand</SmoothingExpanded_ChunkSmoothWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothWallMarble.label>aus Brocken gebaute glatte Marmorwand</SmoothingExpanded_ChunkSmoothWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothWallGranite.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothWallSlate.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothWallMarble.description>Eine direkt aus einem rohen Steinbrocken gebaute Wand mit geglätteter Oberfläche.</SmoothingExpanded_ChunkSmoothWallMarble.description>
+
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>geglättete Vanilla-Sandsteinwand</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>geglättete Vanilla-Granitwand</SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>geglättete Vanilla-Kalksteinwand</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>geglättete Vanilla-Schieferwand</SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>geglättete Vanilla-Marmorwand</SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>Verbraucht einen rohen Brocken, um eine echte geglättete Vanilla-Steinwand zu errichten. Nach Fertigstellung kann sie nicht zerlegt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>
+
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>geglätteter Vanilla-Sandsteinboden</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>geglätteter Vanilla-Granitboden</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>geglätteter Vanilla-Kalksteinboden</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>geglätteter Vanilla-Schieferboden</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>geglätteter Vanilla-Marmorboden</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>Verbraucht einen rohen Brocken, um echten geglätteten Vanilla-Steinboden anzulegen. Nach Fertigstellung kann er nicht entfernt werden, um den Brocken zurückzugewinnen.</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>
+</LanguageData>

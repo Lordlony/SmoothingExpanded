@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.label>muro alisado de arenisca construido con pedruscos</SmoothingExpanded_ChunkSmoothWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothWallGranite.label>muro alisado de granito construido con pedruscos</SmoothingExpanded_ChunkSmoothWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.label>muro alisado de caliza construido con pedruscos</SmoothingExpanded_ChunkSmoothWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothWallSlate.label>muro alisado de pizarra construido con pedruscos</SmoothingExpanded_ChunkSmoothWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothWallMarble.label>muro alisado de mármol construido con pedruscos</SmoothingExpanded_ChunkSmoothWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothWallGranite.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothWallSlate.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothWallMarble.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallMarble.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>muro alisado de arenisca de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>muro alisado de granito de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>muro alisado de caliza de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>muro alisado de pizarra de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>muro alisado de mármol de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>suelo alisado de arenisca de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>suelo alisado de granito de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>suelo alisado de caliza de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>suelo alisado de pizarra de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>suelo alisado de mármol de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>
+</LanguageData>

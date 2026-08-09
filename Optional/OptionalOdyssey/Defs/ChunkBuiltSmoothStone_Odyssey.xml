@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Inspired by Odyssey's Vacstone, SmoothedVacstone, ChunkVacstone and
+    TileVacstone definitions. MayRequire keeps Odyssey entirely optional: these
+    defs do not enter the database when the DLC is inactive.
+  -->
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothWallBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>SmoothingExpanded_ChunkSmoothWallVacstone</defName>
+    <label>chunk-built smooth vacstone wall</label>
+    <graphicData><color>(115,106,98)</color></graphicData>
+    <uiIconColor>(115,106,98)</uiIconColor>
+    <costList Inherit="False"><ChunkVacstone>1</ChunkVacstone></costList>
+  </ThingDef>
+
+  <TerrainDef ParentName="SmoothingExpanded_ChunkSmoothFloorBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>SmoothingExpanded_ChunkSmoothFloorVacstone</defName>
+    <label>chunk-built smooth vacstone floor</label>
+    <color>(115,106,98)</color>
+    <costList Inherit="False"><ChunkVacstone>1</ChunkVacstone></costList>
+  </TerrainDef>
+
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalWallBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalWallVacstone</defName>
+    <label>natural smooth vacstone wall</label>
+    <costList Inherit="False"><ChunkVacstone>1</ChunkVacstone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><wall>SmoothedVacstone</wall></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="SmoothingExpanded_ChunkSmoothNaturalFloorBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>SmoothingExpanded_ChunkSmoothNaturalFloorVacstone</defName>
+    <label>natural smooth vacstone floor</label>
+    <costList Inherit="False"><ChunkVacstone>1</ChunkVacstone></costList>
+    <modExtensions><li Class="Lordlony.SmoothingExpanded.NaturalSurfaceTargetExtension"><floorStone>Vacstone</floorStone></li></modExtensions>
+  </ThingDef>
+
+</Defs>

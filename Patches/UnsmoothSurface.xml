@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Compatibility inspired by Unsmooth Surface's documented Quarry patch.
+    Its own DefModExtension is attached only when that mod is active, so this
+    creates no dependency and no foreign type is resolved when it is absent.
+
+    Unsmoothing deliberately converts our constructed finish into the matching
+    vanilla natural rough terrain/wall. It is transformation work, not
+    deconstruction, and therefore does not return the chunk used to build it.
+  -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Unsmooth Surface</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallSandstone"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Sandstone</unsmoothedThing></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallGranite"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Granite</unsmoothedThing></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallLimestone"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Limestone</unsmoothedThing></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallSlate"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Slate</unsmoothedThing></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallMarble"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Marble</unsmoothedThing></li></value>
+        </li>
+
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorSandstone"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Sandstone_Rough</unsmoothedTerrain></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorGranite"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Granite_Rough</unsmoothedTerrain></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorLimestone"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Limestone_Rough</unsmoothedTerrain></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorSlate"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Slate_Rough</unsmoothedTerrain></li></value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorMarble"]</xpath>
+          <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Marble_Rough</unsmoothedTerrain></li></value>
+        </li>
+
+        <!-- Odyssey definitions exist only when Odyssey is active. The nested
+             conditional prevents missing-def patch errors in Core-only games. -->
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallVacstone"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>/Defs/ThingDef[defName="SmoothingExpanded_ChunkSmoothWallVacstone"]</xpath>
+                <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedThing>Vacstone</unsmoothedThing></li></value>
+              </li>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>/Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorVacstone"]</xpath>
+                <value><li Class="LambdaTenEleven.UnsmoothSurface.UnsmoothSurfaceExtension"><unsmoothedTerrain>Vacstone_Rough</unsmoothedTerrain></li></value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

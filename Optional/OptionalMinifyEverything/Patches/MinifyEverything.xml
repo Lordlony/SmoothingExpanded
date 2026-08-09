@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    MinifyEverything normally adds MinifiedThing at runtime, after RimWorld has
+    generated blueprint definitions. It deliberately skips defNames beginning
+    with "Smooth", which includes SmoothingExpanded_*. Declaring minification
+    before implied defs are generated gives each constructed chunk wall its own
+    correct install blueprint, including automatic source-wall reassignment for
+    "Reinstall at another location".
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="SmoothingExpanded_ChunkSmoothWallBase"]</xpath>
+    <value>
+      <minifiedDef>MinifiedThing</minifiedDef>
+      <!-- Minifiable buildings become haulable items while uninstalled.
+           RimWorld validates these fields before the runtime controller copies
+           the matching chunk's live Mass stat onto each concrete wall. -->
+      <thingCategories>
+        <li>BuildingsMisc</li>
+      </thingCategories>
+      <statBases>
+        <Mass>25</Mass>
+      </statBases>
+    </value>
+  </Operation>
+</Patch>

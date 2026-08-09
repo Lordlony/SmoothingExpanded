@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!--
+    Compatibility with CCP's Stone Tweaks Vanilla.
+
+    This entire folder is loaded conditionally through LoadFolders.xml, so the
+    XmlExtensions class below is never parsed in a Core-only game. CCP requires
+    XML Extensions and exposes its saved Col1-Col5 values through UseSettings.
+    Reusing those values keeps our five Core chunk-built floors aligned with
+    the player's active CCP colour configuration.
+  -->
+  <Operation Class="XmlExtensions.UseSettings">
+    <modId>cucumpear.stonetweaksvanilla</modId>
+    <keys>
+      <li>Col1</li>
+      <li>Col2</li>
+      <li>Col3</li>
+      <li>Col4</li>
+      <li>Col5</li>
+    </keys>
+    <defaultValues>
+      <li>87,71,63</li>
+      <li>75,84,92</li>
+      <li>232,225,202</li>
+      <li>64,64,64</li>
+      <li>255,255,255</li>
+    </defaultValues>
+    <apply>
+      <Operation Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorSandstone"]/color</xpath>
+            <value><color>({Col1})</color></value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorGranite"]/color</xpath>
+            <value><color>({Col2})</color></value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorLimestone"]/color</xpath>
+            <value><color>({Col3})</color></value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorSlate"]/color</xpath>
+            <value><color>({Col4})</color></value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="SmoothingExpanded_ChunkSmoothFloorMarble"]/color</xpath>
+            <value><color>({Col5})</color></value>
+          </li>
+        </operations>
+      </Operation>
+    </apply>
+  </Operation>
+</Patch>

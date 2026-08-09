@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.label>гладкая стена из обломка вакуумита</SmoothingExpanded_ChunkSmoothWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.description>Каменная стена, построенная прямо из необработанного обломка и гладко отделанная.</SmoothingExpanded_ChunkSmoothWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>ванильная гладкая стена из вакуумита</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>Расходует один необработанный обломок для создания настоящей ванильной гладкой каменной стены. После завершения её нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>ванильный гладкий пол из вакуумита</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>Расходует один необработанный обломок для создания настоящего ванильного гладкого каменного пола. После завершения его нельзя разобрать и вернуть обломок.</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>
+</LanguageData>

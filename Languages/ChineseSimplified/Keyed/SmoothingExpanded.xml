@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 简体中文初始翻译。欢迎母语使用者反馈更自然的措辞。 -->
+  <!-- Preserve the Workshop name for recognition, followed by its Chinese translation. -->
+  <SmoothingExpanded.SettingsCategory>Smoothing Expanded（平滑扩展）</SmoothingExpanded.SettingsCategory>
+  <SmoothingExpanded.Section.Speed>速度倍率</SmoothingExpanded.Section.Speed>
+  <SmoothingExpanded.Section.Natural>原版平滑墙壁与地面</SmoothingExpanded.Section.Natural>
+  <SmoothingExpanded.Section.Chunk>岩块建造的平滑墙壁与地面</SmoothingExpanded.Section.Chunk>
+  <SmoothingExpanded.Section.Uninstall>存档准备与卸载安全</SmoothingExpanded.Section.Uninstall>
+  <SmoothingExpanded.Instant>瞬间完成</SmoothingExpanded.Instant>
+  <SmoothingExpanded.InstantValue>瞬间</SmoothingExpanded.InstantValue>
+  <SmoothingExpanded.WallSpeed>墙壁平滑速度倍率：{0}</SmoothingExpanded.WallSpeed>
+  <SmoothingExpanded.FloorSpeed>地面平滑速度倍率：{0}</SmoothingExpanded.FloorSpeed>
+  <SmoothingExpanded.InstantWallTooltip>使平滑工作近乎瞬间完成。由于此选项近似作弊，默认关闭。</SmoothingExpanded.InstantWallTooltip>
+  <SmoothingExpanded.InstantFloorTooltip>使地面平滑近乎瞬间完成。需要 Harmony。默认：关闭。</SmoothingExpanded.InstantFloorTooltip>
+  <SmoothingExpanded.SpeedExplanation>原版速度为 1 倍。本模组默认为 2 倍。建造技能、操作能力、视力和全局工作速度仍会正常生效。</SmoothingExpanded.SpeedExplanation>
+  <SmoothingExpanded.ResetWallSpeed>将墙壁速度重置为 2 倍</SmoothingExpanded.ResetWallSpeed>
+  <SmoothingExpanded.ResetFloorSpeed>将地面速度重置为 2 倍</SmoothingExpanded.ResetFloorSpeed>
+  <SmoothingExpanded.FloorSpeedHarmony>Harmony：可单独设置地面速度。没有 Harmony 时，地面使用墙壁速度。</SmoothingExpanded.FloorSpeedHarmony>
+  <SmoothingExpanded.NaturalWealthHeader>平滑表面财富值</SmoothingExpanded.NaturalWealthHeader>
+  <SmoothingExpanded.OverrideNaturalWallWealth>覆盖原版平滑墙壁的财富值（默认：关闭）</SmoothingExpanded.OverrideNaturalWallWealth>
+  <SmoothingExpanded.OverrideNaturalWallWealthTooltip>检测到的原版平滑墙壁将使用下方选择的数值。</SmoothingExpanded.OverrideNaturalWallWealthTooltip>
+  <SmoothingExpanded.NaturalWallValue>每格原版平滑墙壁价值：{0}</SmoothingExpanded.NaturalWallValue>
+  <SmoothingExpanded.ResetWallWealth>将墙壁财富值重置为默认（关闭，数值 0）</SmoothingExpanded.ResetWallWealth>
+  <SmoothingExpanded.FloorWealthHarmony>需要 Harmony。</SmoothingExpanded.FloorWealthHarmony>
+  <SmoothingExpanded.OverrideNaturalFloorWealth>实验性：覆盖原版平滑地面的财富值（默认：关闭）</SmoothingExpanded.OverrideNaturalFloorWealth>
+  <SmoothingExpanded.OverrideNaturalFloorWealthTooltip>重新统计后调整 RimWorld 缓存的地面财富总值。可能与修改地图财富、袭击财富或地面估值的模组冲突。</SmoothingExpanded.OverrideNaturalFloorWealthTooltip>
+  <SmoothingExpanded.RequiresHarmonyTooltip>需要 Harmony。没有 Harmony 时，墙壁速度和墙壁财富值仍可使用。</SmoothingExpanded.RequiresHarmonyTooltip>
+  <SmoothingExpanded.NaturalFloorValue>每格原版平滑地面价值：{0}</SmoothingExpanded.NaturalFloorValue>
+  <SmoothingExpanded.FloorWealthWarning>警告：此功能为实验性。为获得最佳兼容性，建议保持关闭。未勾选时将完全跳过此调整。</SmoothingExpanded.FloorWealthWarning>
+  <SmoothingExpanded.ResetFloorWealth>将地面财富值重置为默认（关闭，数值 0）</SmoothingExpanded.ResetFloorWealth>
+  <SmoothingExpanded.NaturalBeautyHeader>平滑表面美观度</SmoothingExpanded.NaturalBeautyHeader>
+  <SmoothingExpanded.RemoveNaturalWallBeauty>覆盖墙壁美观度（默认：关闭）</SmoothingExpanded.RemoveNaturalWallBeauty>
+  <SmoothingExpanded.RemoveNaturalWallBeautyTooltip>检测到的原版平滑墙壁将使用下方数值。立即生效；不需要 Harmony。</SmoothingExpanded.RemoveNaturalWallBeautyTooltip>
+  <SmoothingExpanded.NaturalWallBeautyValue>原版平滑墙壁美观度：{0}</SmoothingExpanded.NaturalWallBeautyValue>
+  <SmoothingExpanded.RemoveNaturalFloorBeauty>覆盖地面美观度（默认：关闭）</SmoothingExpanded.RemoveNaturalFloorBeauty>
+  <SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>检测到的原版平滑地面将使用下方数值。立即生效；不需要 Harmony。</SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>
+  <SmoothingExpanded.NaturalFloorBeautyValue>原版平滑地面美观度：{0}</SmoothingExpanded.NaturalFloorBeautyValue>
+  <SmoothingExpanded.EnableChunkConstruction>启用岩块建造的平滑石墙与地面（需要重启）</SmoothingExpanded.EnableChunkConstruction>
+  <SmoothingExpanded.EnableChunkConstructionTooltip>为 Core 石材添加岩块建造的平滑墙壁与地面；启用 Odyssey 时还会添加真空岩。每格消耗一个对应的原始岩块。为保证存档安全，定义会一直保留，但关闭时建筑规划菜单中的项目会隐藏。</SmoothingExpanded.EnableChunkConstructionTooltip>
+  <SmoothingExpanded.DisableChunkTitle>禁用岩块建造</SmoothingExpanded.DisableChunkTitle>
+  <SmoothingExpanded.DisableChunkWarning>岩块建造已关闭。在禁用此功能前，尤其是在卸载本模组前，请先使用“为卸载准备已加载的存档”，将已完成的自定义表面转换，并取消未完成的蓝图或建造框架。\n\n是否继续禁用岩块建造？未经准备的现有表面仍会留在存档中。</SmoothingExpanded.DisableChunkWarning>
+  <SmoothingExpanded.UninstallWarning>卸载警告：天然结果表面已经是原版内容，可安全保留。移除本模组前，必须使用下方工具转换可拆除的建造表面。</SmoothingExpanded.UninstallWarning>
+  <SmoothingExpanded.ChunkResultHeader>建造结果（需要重启）</SmoothingExpanded.ChunkResultHeader>
+  <SmoothingExpanded.ChunkResultConstructed>岩块建造：可拆除墙壁与可移除地面（默认）</SmoothingExpanded.ChunkResultConstructed>
+  <SmoothingExpanded.ChunkResultNatural>原版：可开采墙壁与永久地面</SmoothingExpanded.ChunkResultNatural>
+  <SmoothingExpanded.ChunkResultBoth>显示两种结果</SmoothingExpanded.ChunkResultBoth>
+  <SmoothingExpanded.NaturalResultExplanation>原版结果会消耗一个岩块和正常工作量，随后变为真正的原版平滑表面。墙壁可开采；地面永久保留。移除本模组后两者仍会保留。</SmoothingExpanded.NaturalResultExplanation>
+  <SmoothingExpanded.ChunkWealthHeader>岩块建造表面的财富值</SmoothingExpanded.ChunkWealthHeader>
+  <SmoothingExpanded.ChunkWallWealth>覆盖墙壁财富值（需要重启）</SmoothingExpanded.ChunkWallWealth>
+  <SmoothingExpanded.ChunkWallWealthTooltip>启用后，所有岩块建造墙壁使用下方数值。关闭时，各自使用对应石砖墙的数值。</SmoothingExpanded.ChunkWallWealthTooltip>
+  <SmoothingExpanded.ChunkWallWealthValue>每格岩块建造墙壁财富值：{0}</SmoothingExpanded.ChunkWallWealthValue>
+  <SmoothingExpanded.ChunkFloorWealthHarmony>地面财富值需要 Harmony。</SmoothingExpanded.ChunkFloorWealthHarmony>
+  <SmoothingExpanded.ChunkFloorWealth>覆盖地面财富值（需要重启）</SmoothingExpanded.ChunkFloorWealth>
+  <SmoothingExpanded.ChunkFloorWealthTooltip>启用后，所有岩块建造地面使用下方数值。关闭时，各自使用对应石质地面的数值。</SmoothingExpanded.ChunkFloorWealthTooltip>
+  <SmoothingExpanded.ChunkFloorWealthValue>每格岩块建造地面财富值：{0}</SmoothingExpanded.ChunkFloorWealthValue>
+  <SmoothingExpanded.ChunkBeautyHeader>岩块建造表面的美观度</SmoothingExpanded.ChunkBeautyHeader>
+  <SmoothingExpanded.ChunkWallBeauty>覆盖墙壁美观度（需要重启）</SmoothingExpanded.ChunkWallBeauty>
+  <SmoothingExpanded.ChunkWallBeautyTooltip>启用后，所有岩块建造墙壁使用下方数值。关闭时，各自匹配对应的原版平滑墙壁。</SmoothingExpanded.ChunkWallBeautyTooltip>
+  <SmoothingExpanded.ChunkWallBeautyValue>岩块建造墙壁美观度：{0}</SmoothingExpanded.ChunkWallBeautyValue>
+  <SmoothingExpanded.ChunkFloorBeauty>覆盖地面美观度（需要重启）</SmoothingExpanded.ChunkFloorBeauty>
+  <SmoothingExpanded.ChunkFloorBeautyTooltip>启用后，所有岩块建造地面使用下方数值。关闭时，各自匹配对应的原版平滑地面。</SmoothingExpanded.ChunkFloorBeautyTooltip>
+  <SmoothingExpanded.ChunkFloorBeautyValue>岩块建造地面美观度：{0}</SmoothingExpanded.ChunkFloorBeautyValue>
+  <SmoothingExpanded.ChunkConstructionExplanation>无需研究。每格消耗一个对应的原始岩块，并使用普通石墙或石质地面的建造工作量。</SmoothingExpanded.ChunkConstructionExplanation>
+  <SmoothingExpanded.UninstallExplanation>将已完成的自定义地面与墙壁转换为原版天然平滑对应物，并取消所有未完成的岩块建造蓝图或框架。卸载前请使用此功能；已完成的天然结果表面无需转换。</SmoothingExpanded.UninstallExplanation>
+  <SmoothingExpanded.PrepareUninstall>为卸载准备已加载的存档</SmoothingExpanded.PrepareUninstall>
+  <SmoothingExpanded.LoadSaveTooltip>请先加载一个存档。转换将作用于该存档当前持有的所有地图。</SmoothingExpanded.LoadSaveTooltip>
+  <SmoothingExpanded.ResetAll>将所有设置重置为默认值</SmoothingExpanded.ResetAll>
+  <SmoothingExpanded.ResetTitle>重置所有设置</SmoothingExpanded.ResetTitle>
+  <SmoothingExpanded.ResetWarning>重置所有设置将禁用岩块建造。如果此存档中有已完成的自定义表面或未完成的建造，请取消操作，并先使用“为卸载准备已加载的存档”。\n\n仍要重置所有设置吗？</SmoothingExpanded.ResetWarning>
+
+  <!-- 存档转换消息。{0}=地面，{1}=墙壁，{2}=地图，{3}=未完成的建造。 -->
+  <SmoothingExpanded.ConversionNeedsSave>请先加载一个存档，再转换岩块建造表面。</SmoothingExpanded.ConversionNeedsSave>
+  <SmoothingExpanded.ConversionTitle>转换岩块建造表面</SmoothingExpanded.ConversionTitle>
+  <SmoothingExpanded.ConversionWarning>是否转换所有已加载地图上的全部岩块建造平滑地面与墙壁？\n\n地面与墙壁将变为对应的原版天然平滑表面。所有未完成的岩块建造蓝图或建造框架都会被取消，已送达的资源将正常返还。此操作会修改存档，且无法自动撤销。请先备份存档。</SmoothingExpanded.ConversionWarning>
+  <SmoothingExpanded.ConversionReport>转换完成：在 {2} 张已加载地图上转换了 {0} 格地面和 {1} 面墙壁；取消了 {3} 个未完成的蓝图/框架。岩块建造设置已重置为默认值；请重启游戏以更新建筑规划菜单的可见性。移除本模组前请先保存。</SmoothingExpanded.ConversionReport>
+  <SmoothingExpanded.ConversionIncomplete>卸载准备尚未完成：存档中仍有 {0} 个自定义表面。岩块建造设置未被重置。请勿移除本模组；请检查错误日志后重试。</SmoothingExpanded.ConversionIncomplete>
+</LanguageData>

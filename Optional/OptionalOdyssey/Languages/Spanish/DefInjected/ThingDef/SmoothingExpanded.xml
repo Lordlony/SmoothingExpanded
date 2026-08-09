@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.label>muro alisado de piedra del vacío construido con pedruscos</SmoothingExpanded_ChunkSmoothWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.description>Un muro de piedra construido directamente con un pedrusco sin procesar y acabado con una superficie lisa.</SmoothingExpanded_ChunkSmoothWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>muro alisado de piedra del vacío de Vanilla</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>Consume un pedrusco sin procesar para construir un auténtico muro de piedra alisado de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>suelo alisado de piedra del vacío de Vanilla</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>Consume un pedrusco sin procesar para construir un auténtico terreno de piedra alisada de Vanilla. Una vez terminado, no puede desmontarse para recuperar el pedrusco.</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>
+</LanguageData>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA527088-1B55-43EB-8A1C-7D994DD2A625}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lordlony.SmoothingExpanded</RootNamespace>
+    <AssemblyName>SmoothingExpanded.Harmony</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    <RimWorldDir Condition=" '$(RimWorldDir)' == '' ">C:\Gaming\Steam\steamapps\common\RimWorld</RimWorldDir>
+    <HarmonyDir Condition=" '$(HarmonyDir)' == '' ">C:\Gaming\Steam\steamapps\workshop\content\294100\2009463077\Current</HarmonyDir>
+    <MainAssemblyPath Condition=" '$(MainAssemblyPath)' == '' ">..\..\..\Assemblies\SmoothingExpanded.dll</MainAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <OutputPath>..\Assemblies\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDir)\Assemblies\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SmoothingExpanded">
+      <HintPath>$(MainAssemblyPath)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SmoothingExpanded.Harmony.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

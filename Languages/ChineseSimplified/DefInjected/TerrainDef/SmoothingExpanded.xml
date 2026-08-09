@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothFloorSandstone.label>岩块建造的平滑砂岩地面</SmoothingExpanded_ChunkSmoothFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothFloorGranite.label>岩块建造的平滑花岗岩地面</SmoothingExpanded_ChunkSmoothFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothFloorLimestone.label>岩块建造的平滑石灰岩地面</SmoothingExpanded_ChunkSmoothFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothFloorSlate.label>岩块建造的平滑板岩地面</SmoothingExpanded_ChunkSmoothFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothFloorMarble.label>岩块建造的平滑大理石地面</SmoothingExpanded_ChunkSmoothFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothFloorSandstone.description>直接使用一个原始石质岩块建造并抛光至平滑的地面。</SmoothingExpanded_ChunkSmoothFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothFloorGranite.description>直接使用一个原始石质岩块建造并抛光至平滑的地面。</SmoothingExpanded_ChunkSmoothFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothFloorLimestone.description>直接使用一个原始石质岩块建造并抛光至平滑的地面。</SmoothingExpanded_ChunkSmoothFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothFloorSlate.description>直接使用一个原始石质岩块建造并抛光至平滑的地面。</SmoothingExpanded_ChunkSmoothFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothFloorMarble.description>直接使用一个原始石质岩块建造并抛光至平滑的地面。</SmoothingExpanded_ChunkSmoothFloorMarble.description>
+</LanguageData>

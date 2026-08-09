@@ -1,0 +1,19 @@
+# Compiled game assemblies are release artifacts. Build them locally from Source/.
+/Assemblies/
+/Optional/OptionalHarmony/Assemblies/
+
+# Steam publication state and artwork stay with the local mod package.
+/About/PublishedFileId.txt
+/About/Preview.png
+
+# Local build and IDE output.
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# Local diagnostics and archives.
+*.log
+*.zip
+*.bak

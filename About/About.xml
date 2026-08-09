@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Smoothing Expanded</name>
+  <author>Lordlony</author>
+  <modVersion>0.49.0</modVersion>
+  <packageId>lordlony.smoothingexpanded</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>
+Adds configurable or instant smoothing, optional wealth and beauty controls for vanilla smoothed walls and floors, and optional smooth stone construction using raw chunks. Construction can produce deconstructible/removable chunk-built surfaces, genuine vanilla smoothed surfaces, or both.
+
+Requires RimWorld Core. Harmony is optional: without it, wall smoothing speed, smoothed-wall wealth, beauty controls and chunk construction remain available. Floors follow the wall speed; independent floor speed, floor instant mode and floor-wealth controls require Harmony. Overrides, instant smoothing and chunk construction default to off. Chunk construction adds five Core wall/floor pairs plus an Odyssey-only Vacstone pair. Each tile costs one matching chunk, requires no research and uses normal stone construction work.
+
+Chunk-built surfaces use RimWorld's normal material-return rules and can be controlled by dedicated refund mods. Vanilla-result construction becomes genuine vanilla assets on completion. Unsmooth Surface, Better Architect Menu, MinifyEverything and selected graphical mods receive conditional compatibility. Before removing this mod, use its preparation tool on saves containing chunk-built surfaces, including packed or transported walls; vanilla-result surfaces are already uninstall-safe. Development assistance and code review: OpenAI Codex.
+
+Languages: English, Simplified Chinese, German, Russian and Spanish. The non-English localizations are AI translations; corrections from native speakers are welcome.
+  </description>
+  <loadAfter>
+    <!-- Ordering hints for RimWorld's built-in auto-sort. These entries do not
+         make Core or any DLC a dependency; inactive DLCs are simply ignored. -->
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>brrainz.harmony</li>
+    <!-- Optional: our stable def names begin with "SmoothingExpanded", which
+         MinifyEverything's broad "Smooth*" exclusion would otherwise skip. -->
+    <li>erdelf.MinifyEverything</li>
+    <!-- Optional: ensures Unsmooth Surface's extension class is available
+         before our conditional compatibility patch is evaluated. -->
+    <li>LambdaTenEleven.UnsmoothSurface</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.label>岩块建造的平滑真空岩墙</SmoothingExpanded_ChunkSmoothWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.description>直接使用一个原始岩块建造并将表面打磨平滑的石墙。</SmoothingExpanded_ChunkSmoothWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>原版平滑真空岩墙</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>消耗一个原始岩块，建造真正的原版平滑石墙。完成后无法拆除以取回岩块。</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>原版平滑真空岩地面</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>消耗一个原始岩块，建造真正的原版平滑石质地形。完成后无法拆除以取回岩块。</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>
+</LanguageData>
