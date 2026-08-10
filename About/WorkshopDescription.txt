@@ -1,80 +1,52 @@
 [h1]Smoothing Expanded[/h1]
 
-Make RimWorld's natural stone smoothing faster, optionally adjust its wealth or beauty, and build smooth stone directly from raw chunks.
+Make RimWorld's natural stone smoothing faster, adjust its wealth or beauty if wanted, and build smooth stone directly from raw chunks.
 
 [h2]Source and development[/h2]
-Source code, build instructions, validation tooling and the component-reuse terms are available on [url=https://github.com/Lordlony/SmoothingExpanded]GitHub[/url]. The Workshop download contains only the runtime files needed by RimWorld.
+Source code, build instructions, validation tooling and component-reuse terms: [url=https://github.com/Lordlony/SmoothingExpanded]GitHub[/url]. The Workshop download contains only the files RimWorld needs.
 
 [h2]Features[/h2]
 [list]
-[*]Separate adjustable wall and floor smoothing speeds from 0.25x to 10x (default 2x)
+[*]Adjustable wall and floor smoothing speeds from 0.25x to 10x (default 2x)
 [*]Optional instant smoothing
-[*]Separate optional wealth and beauty overrides for vanilla smoothed walls and floors
-[*]Optional chunk-built smooth walls and floors using one matching chunk per tile
-[*]Chunk-built results, genuine vanilla smoothed results, or both
-[*]Sandstone, granite, limestone, slate and marble support
-[*]Conditional Vacstone support when Odyssey is active
+[*]Optional wealth and beauty overrides for vanilla smoothed walls and floors
+[*]Optional chunk-built smooth walls and floors: one matching raw chunk per tile
+[*]Choose chunk-built, genuine vanilla results, or both catalogues
+[*]Sandstone, granite, limestone, slate, marble, and Odyssey Vacstone
 [*]No research prerequisite; normal construction work and vanilla deconstruction returns
-[*]Paintable surfaces based on their corresponding vanilla smooth stone
-[*]Audited conversion of custom surfaces into vanilla natural equivalents
 [/list]
 
 [h2]Dependencies[/h2]
 [b]RimWorld Core is the only requirement.[/b]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url] is optional. Without Harmony, wall smoothing speed, wall wealth and chunk construction still work. Floors follow the wall speed, while independent floor speed, floor instant mode and floor-wealth controls are unavailable.
-
-Odyssey is optional. Vacstone construction appears only while the DLC is active.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url] is optional. Without it, wall speed, wall wealth and chunk construction still work. Independent floor speed, floor instant mode and floor wealth require Harmony. Odyssey is optional; Vacstone appears only while it is active.
 
 [h2]Chunk-built surfaces[/h2]
-Chunk construction is disabled by default. When enabled, choose one of three restart-required catalogues:
+Chunk construction is disabled by default. Each tile costs one matching raw chunk and uses normal stone construction work.
 
 [list]
-[*][b]Chunk-built:[/b] deconstructible walls and floors removable with Remove Floor. This is the default and recommended mode.
-[*][b]Vanilla:[/b] construction consumes its chunk and work, then becomes a genuine vanilla smoothed surface. Walls are mineable; floors are permanent. Both remain after uninstalling.
-[*][b]Both:[/b] exposes both result types.
+[*][b]Chunk-built:[/b] deconstructible walls and removable floors.
+[*][b]Vanilla:[/b] consumes the chunk and becomes a genuine vanilla smoothed wall or permanent floor.
+[*][b]Both:[/b] shows both result types.
 [/list]
 
-Constructed surfaces use RimWorld's normal deconstruction-return rules, allowing refund mods to control material returns.
-
-[b]Balance:[/b] Each chunk-built wall or floor consumes one complete raw chunk but does not require Stonecutting research or block production. It otherwise uses the construction work and general balance values of its equivalent stone-block construction. Walls use the corresponding stone wall's structural properties, weigh as much as the matching chunk and are not airtight. This provides earlier and more convenient stone construction at a substantial material-efficiency cost, since a cut chunk would normally provide enough blocks for several constructions.
-
-By default, constructed walls and floors receive the beauty and wealth of their corresponding vanilla smoothed or ordinary stone surfaces. Separate sliders can override wall and floor beauty or wealth. Wealth ranges from 0 to 100 in 0.5 increments; beauty ranges from -10 to 20 in whole-number increments. This is an optional alternative early construction route rather than a research-gated replacement for ordinary stonecutting.
+Chunk-built surfaces follow normal material-return rules, so refund mods can control returns. Their optional wealth and beauty overrides default off. Catalogue and constructed-value changes require a restart.
 
 [h2]Compatibility[/h2]
 [list]
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url]:[/b] explicitly supported. Its Unsmooth order converts chunk-built surfaces into matching vanilla rough walls or terrain without refunding the original chunk.
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1524681306]CCP's Stone Tweaks Vanilla[/url]:[/b] the five Core chunk-built floors inherit CCP's configured stone colours.
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url]:[/b] works through the normal deconstruction system; no dedicated patch is required.
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3563882422]Better Architect Menu[/url]:[/b] Harmony integration filters chunk-built floors according to the selected construction mode and exposes enabled vanilla-result floor proxies in its specialised Floors screen.
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3697920753]Architect Menu Optimizer[/url]:[/b] no dedicated patch is required; compatibility follows Better Architect Menu's supported floor-list path.
-[*][b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=872762753]MinifyEverything[/url]:[/b] constructed chunk-built walls receive proper minification and reinstall behaviour when active.
-[*][b]Odyssey:[/b] Vacstone walls and floors are added automatically when active.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url] - converts chunk-built surfaces to matching vanilla rough surfaces.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1524681306]CCP's Stone Tweaks Vanilla[/url] - Core chunk-built floors inherit its stone colours.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url] - works through normal deconstruction.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3563882422]Better Architect Menu[/url] and Architect Menu Optimizer - supported floor catalogue path.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=872762753]MinifyEverything[/url] - supports minifying and reinstalling chunk-built walls.
 [/list]
 
-Vanilla-result construction becomes genuine vanilla definitions and therefore offers the broadest graphical compatibility. Chunk-built surfaces use separate definitions; mods that directly replace terrain materials, textures, architect categories, wealth calculations or smoothing logic may need a specific patch.
-
-The experimental floor-wealth options are disabled by default. They may overlap with mods that replace map-wealth or raid-point calculations, but their Harmony adjustments are skipped entirely while unchecked. General floor-wealth options do not necessarily affect vanilla smoothed terrain, which RimWorld records separately from ordinary constructed floors.
-
-Additional modded stone types are not generated automatically. Compatibility is safer when added through specific patches.
+Vanilla-result construction has the broadest mod compatibility. The experimental floor-wealth option is off by default and may overlap with mods that replace wealth or raid calculations.
 
 [h2]Important uninstall instructions[/h2]
-[b]Do not remove this mod from a save containing constructed chunk-built surfaces.[/b]
+[b]Do not remove this mod from a save containing chunk-built surfaces.[/b]
 
-Load the save, open Smoothing Expanded's settings and select [b]Prepare loaded save for uninstall[/b]. The tool converts completed custom surfaces, including packed walls in containers or caravans, and cancels unfinished blueprints and frames. It will warn instead of resetting settings if custom surfaces remain unresolved. Save after a successful conversion report, then remove the mod.
-
-Vanilla-result surfaces are already safe and need no conversion.
-
-[h2]Useful companion mods[/h2]
-[list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3717703166]Unsmooth Surface[/url] - return smooth surfaces to rough vanilla equivalents.
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568850063]Configurable Deconstruct Percentage[/url] - customise construction refunds.
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1524681306]CCP's Stone Tweaks Vanilla[/url] - configurable Core stone colours and balance.
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3461137081]Visible Wealth[/url] - inspect colony wealth, although custom surfaces may appear under different breakdown headings.
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2432348514]Rock and Stone[/url] - broader chunk-based rock construction; overlaps with the optional chunk catalogue.
-[/list]
-
-See the pinned discussion for expanded compatibility notes, more companion mods and independently developed alternatives.
+Load the save, open Smoothing Expanded settings and select [b]Prepare loaded save for uninstall[/b]. It converts completed custom surfaces, including packed walls in containers and caravans, and cancels unfinished blueprints and frames. Save after a successful conversion report, then remove the mod. Vanilla-result surfaces are already uninstall-safe.
 
 [h2]Languages[/h2]
 [list]
@@ -86,9 +58,7 @@ See the pinned discussion for expanded compatibility notes, more companion mods 
 [/list]
 
 [h2]Compatibility reports[/h2]
-Please include your active mod list, Player.log, affected stone, whether the surface was Vanilla or Chunk-built, and the selected construction-result mode. Load order alone may not resolve definition or material conflicts.
+Please include your active mod list, Player.log, affected stone, result type, and construction-result mode.
 
-[h2]Credits and disclosure[/h2]
+[h2]Credits[/h2]
 Created by Lordlony. Development assistance and code review by OpenAI Codex.
-
-This project used substantial AI assistance, while its direction, feature choices, testing and final decisions remained human-led. I believe transparent disclosure, human oversight and meaningful safeguards are important when using this technology. Further context is included in the pinned discussion.
