@@ -1,5 +1,22 @@
 # Smoothing Expanded changelog
 
+## [1.0.0] - 2026-08-10
+
+### Settings interface
+
+- Replaced the fixed-height collapsible settings screen with compact Home,
+  Smoothing, Vanilla Surfaces, Chunk Construction and Save Safety pages.
+- Added selected-tab highlighting, independent dynamically sized page scrolling,
+  scoped category resets, and a guarded Home-page Reset All action.
+- Kept save/uninstall preparation separate from ordinary settings and made
+  Harmony feature availability clearer.
+
+### Compatibility
+
+- Existing settings keys, defaults, validation, migrations and saves remain
+  compatible. Reset All never starts save conversion, and Save Safety remains
+  available independently of the current chunk-construction setting.
+
 ## [0.49.1] - 2026-08-10
 
 ### Localisation

@@ -418,12 +418,11 @@ namespace Lordlony.SmoothingExpanded
         internal static SmoothingSettings Settings;
         internal static bool FloorSpeedFeatureAvailable;
         internal static bool FloorWealthFeatureAvailable;
-        private Vector2 settingsScrollPosition = Vector2.zero;
-        private const float SettingsContentHeight = 1850f;
-        private bool showSpeedSettings = false;
-        private bool showNaturalSettings = false;
-        private bool showChunkSettings = false;
-        private bool showUninstallSettings = false;
+        private int settingsPage;
+        // Each page owns its scroll state so returning to a detailed category
+        // does not lose the player's place.
+        private readonly Vector2[] settingsPageScrollPositions = new Vector2[5];
+        private readonly float[] settingsPageContentHeights = new float[5];
 
         public SmoothingExpandedMod(ModContentPack content) : base(content)
         {
@@ -446,293 +445,18 @@ namespace Lordlony.SmoothingExpanded
             bool previousNaturalFloorBeauty = Settings.RemoveNaturalFloorBeauty;
             float previousNaturalFloorBeautyValue = Settings.SmoothedFloorBeauty;
 
-            Rect viewRect = new Rect(0f, 0f, inRect.width - 18f,
-                Math.Max(inRect.height + 1f, SettingsContentHeight));
-            Widgets.BeginScrollView(inRect, ref settingsScrollPosition, viewRect);
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(viewRect);
-
-            showSpeedSettings = DrawSectionButton(
-                listing, "SmoothingExpanded.Section.Speed".Translate(), showSpeedSettings);
-            if (showSpeedSettings)
+            DrawPageNavigation(inRect);
+            Rect pageRect = new Rect(inRect.x, inRect.y + 36f, inRect.width,
+                inRect.height - 36f);
+            switch (settingsPage)
             {
-            listing.Label("SmoothingExpanded.WallSpeed".Translate(
-                Settings.InstantSmoothing
-                    ? "SmoothingExpanded.InstantValue".Translate()
-                    : Settings.SpeedMultiplier.ToString("0.00") + "x"));
-            Rect speedRow = listing.GetRect(30f);
-            Rect speedSliderRect = new Rect(speedRow.x, speedRow.y, speedRow.width * 0.70f, speedRow.height);
-            Rect instantRect = new Rect(speedRow.x + speedRow.width * 0.72f, speedRow.y,
-                speedRow.width * 0.28f, speedRow.height);
-            bool speedGuiEnabled = GUI.enabled;
-            GUI.enabled = speedGuiEnabled && !Settings.InstantSmoothing;
-            Settings.SpeedMultiplier = Widgets.HorizontalSlider(
-                speedSliderRect, Settings.SpeedMultiplier, 0.25f, 10f, true);
-            GUI.enabled = speedGuiEnabled;
-            Widgets.CheckboxLabeled(instantRect, "SmoothingExpanded.Instant".Translate(), ref Settings.InstantSmoothing);
-            TooltipHandler.TipRegion(instantRect,
-                "SmoothingExpanded.InstantWallTooltip".Translate());
-            Settings.SpeedMultiplier = (float)Math.Round(Settings.SpeedMultiplier * 4f) / 4f;
-
-            listing.Gap();
-            listing.Label("SmoothingExpanded.SpeedExplanation".Translate());
-            listing.Gap();
-
-            listing.Label("SmoothingExpanded.FloorSpeedHarmony".Translate());
-            bool floorSpeedGuiEnabled = GUI.enabled;
-            GUI.enabled = floorSpeedGuiEnabled && FloorSpeedFeatureAvailable;
-            listing.Label("SmoothingExpanded.FloorSpeed".Translate(
-                Settings.InstantFloorSmoothing
-                    ? "SmoothingExpanded.InstantValue".Translate()
-                    : Settings.FloorSpeedMultiplier.ToString("0.00") + "x"));
-            Rect floorSpeedRow = listing.GetRect(30f);
-            Rect floorSpeedSliderRect = new Rect(floorSpeedRow.x, floorSpeedRow.y,
-                floorSpeedRow.width * 0.70f, floorSpeedRow.height);
-            Rect floorInstantRect = new Rect(floorSpeedRow.x + floorSpeedRow.width * 0.72f,
-                floorSpeedRow.y, floorSpeedRow.width * 0.28f, floorSpeedRow.height);
-            GUI.enabled = floorSpeedGuiEnabled && FloorSpeedFeatureAvailable &&
-                !Settings.InstantFloorSmoothing;
-            Settings.FloorSpeedMultiplier = Widgets.HorizontalSlider(
-                floorSpeedSliderRect, Settings.FloorSpeedMultiplier, 0.25f, 10f, true);
-            GUI.enabled = floorSpeedGuiEnabled && FloorSpeedFeatureAvailable;
-            Widgets.CheckboxLabeled(floorInstantRect, "SmoothingExpanded.Instant".Translate(), ref Settings.InstantFloorSmoothing);
-            GUI.enabled = floorSpeedGuiEnabled;
-            TooltipHandler.TipRegion(floorInstantRect,
-                "SmoothingExpanded.InstantFloorTooltip".Translate());
-            Settings.FloorSpeedMultiplier =
-                (float)Math.Round(Settings.FloorSpeedMultiplier * 4f) / 4f;
+                case 0: DrawHomePage(pageRect); break;
+                case 1: DrawSmoothingPage(pageRect); break;
+                case 2: DrawVanillaSurfacesPage(pageRect); break;
+                case 3: DrawChunkConstructionPage(pageRect); break;
+                default: DrawSaveSafetyPage(pageRect); break;
             }
 
-            listing.GapLine();
-            showNaturalSettings = DrawSectionButton(
-                listing, "SmoothingExpanded.Section.Natural".Translate(), showNaturalSettings);
-            if (showNaturalSettings)
-            {
-            listing.Label("SmoothingExpanded.NaturalWealthHeader".Translate());
-            listing.CheckboxLabeled(
-                "SmoothingExpanded.OverrideNaturalWallWealth".Translate(),
-                ref Settings.OverrideWallWealth,
-                "SmoothingExpanded.OverrideNaturalWallWealthTooltip".Translate());
-            if (Settings.OverrideWallWealth)
-            {
-                listing.Label("SmoothingExpanded.NaturalWallValue".Translate(Settings.SmoothedWallValue.ToString("0.0")));
-                Settings.SmoothedWallValue = (float)Math.Round(listing.Slider(Settings.SmoothedWallValue, 0f, 100f) * 2f) / 2f;
-            }
-
-            listing.Gap();
-            listing.Label("SmoothingExpanded.FloorWealthHarmony".Translate());
-            float floorControlTop = listing.CurHeight;
-            bool previousGuiEnabled = GUI.enabled;
-            GUI.enabled = FloorWealthFeatureAvailable;
-            listing.CheckboxLabeled(
-                "SmoothingExpanded.OverrideNaturalFloorWealth".Translate(),
-                ref Settings.OverrideFloorWealth,
-                "SmoothingExpanded.OverrideNaturalFloorWealthTooltip".Translate());
-            GUI.enabled = previousGuiEnabled;
-            Rect floorControlRect = new Rect(viewRect.x, floorControlTop, viewRect.width, Text.LineHeight);
-            if (!FloorWealthFeatureAvailable)
-            {
-                TooltipHandler.TipRegion(floorControlRect,
-                    "SmoothingExpanded.RequiresHarmonyTooltip".Translate());
-            }
-
-            if (FloorWealthFeatureAvailable && Settings.OverrideFloorWealth)
-            {
-                listing.Label("SmoothingExpanded.NaturalFloorValue".Translate(Settings.SmoothedFloorValue.ToString("0.0")));
-                Settings.SmoothedFloorValue = (float)Math.Round(listing.Slider(Settings.SmoothedFloorValue, 0f, 100f) * 2f) / 2f;
-                listing.Label("SmoothingExpanded.FloorWealthWarning".Translate());
-            }
-
-            listing.GapLine();
-            listing.Label("SmoothingExpanded.NaturalBeautyHeader".Translate());
-            listing.CheckboxLabeled(
-                "SmoothingExpanded.RemoveNaturalWallBeauty".Translate(),
-                ref Settings.RemoveNaturalWallBeauty,
-                "SmoothingExpanded.RemoveNaturalWallBeautyTooltip".Translate());
-            if (Settings.RemoveNaturalWallBeauty)
-            {
-                listing.Label("SmoothingExpanded.NaturalWallBeautyValue".Translate(
-                    Settings.SmoothedWallBeauty.ToString("0")));
-                Settings.SmoothedWallBeauty = (float)Math.Round(
-                    listing.Slider(Settings.SmoothedWallBeauty, -10f, 20f));
-            }
-
-            listing.CheckboxLabeled(
-                "SmoothingExpanded.RemoveNaturalFloorBeauty".Translate(),
-                ref Settings.RemoveNaturalFloorBeauty,
-                "SmoothingExpanded.RemoveNaturalFloorBeautyTooltip".Translate());
-            if (Settings.RemoveNaturalFloorBeauty)
-            {
-                listing.Label("SmoothingExpanded.NaturalFloorBeautyValue".Translate(
-                    Settings.SmoothedFloorBeauty.ToString("0")));
-                Settings.SmoothedFloorBeauty = (float)Math.Round(
-                    listing.Slider(Settings.SmoothedFloorBeauty, -10f, 20f));
-            }
-            }
-
-            listing.GapLine();
-            showChunkSettings = DrawSectionButton(
-                listing, "SmoothingExpanded.Section.Chunk".Translate(), showChunkSettings);
-            if (showChunkSettings)
-            {
-            bool chunkWasEnabled = Settings.EnableChunkConstruction;
-            listing.CheckboxLabeled(
-                "SmoothingExpanded.EnableChunkConstruction".Translate(),
-                ref Settings.EnableChunkConstruction,
-                "SmoothingExpanded.EnableChunkConstructionTooltip".Translate());
-            if (chunkWasEnabled && !Settings.EnableChunkConstruction)
-            {
-                Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
-                    "SmoothingExpanded.DisableChunkWarning".Translate(),
-                    delegate { },
-                    delegate { Settings.EnableChunkConstruction = true; },
-                    false,
-                    "SmoothingExpanded.DisableChunkTitle".Translate()));
-            }
-            listing.Label("SmoothingExpanded.UninstallWarning".Translate());
-            if (Settings.EnableChunkConstruction)
-            {
-                listing.Gap();
-                listing.Label("SmoothingExpanded.ChunkResultHeader".Translate());
-                if (listing.RadioButton(
-                    "SmoothingExpanded.ChunkResultConstructed".Translate(),
-                    Settings.ChunkSurfaceResultMode == 0))
-                {
-                    Settings.ChunkSurfaceResultMode = 0;
-                }
-                if (listing.RadioButton(
-                    "SmoothingExpanded.ChunkResultNatural".Translate(),
-                    Settings.ChunkSurfaceResultMode == 1))
-                {
-                    Settings.ChunkSurfaceResultMode = 1;
-                }
-                if (listing.RadioButton(
-                    "SmoothingExpanded.ChunkResultBoth".Translate(),
-                    Settings.ChunkSurfaceResultMode == 2))
-                {
-                    Settings.ChunkSurfaceResultMode = 2;
-                }
-                listing.Label("SmoothingExpanded.NaturalResultExplanation".Translate());
-
-                if (Settings.ChunkSurfaceResultMode != 1)
-                {
-                    listing.GapLine();
-                    listing.Label("SmoothingExpanded.ChunkWealthHeader".Translate());
-                    bool overrideChunkWallWealth = !Settings.ChunkWallsHaveWealth;
-                    listing.CheckboxLabeled(
-                        "SmoothingExpanded.ChunkWallWealth".Translate(),
-                        ref overrideChunkWallWealth,
-                        "SmoothingExpanded.ChunkWallWealthTooltip".Translate());
-                    Settings.ChunkWallsHaveWealth = !overrideChunkWallWealth;
-                    if (overrideChunkWallWealth)
-                    {
-                        listing.Label("SmoothingExpanded.ChunkWallWealthValue".Translate(
-                            Settings.ChunkWallWealthValue.ToString("0.0")));
-                        Settings.ChunkWallWealthValue = (float)Math.Round(
-                            listing.Slider(Settings.ChunkWallWealthValue, 0f, 100f) * 2f) / 2f;
-                    }
-
-                    listing.Label("SmoothingExpanded.ChunkFloorWealthHarmony".Translate());
-                    bool chunkFloorGuiEnabled = GUI.enabled;
-                    GUI.enabled = chunkFloorGuiEnabled && FloorWealthFeatureAvailable;
-                    bool overrideChunkFloorWealth = !Settings.ChunkFloorsHaveWealth;
-                    listing.CheckboxLabeled(
-                        "SmoothingExpanded.ChunkFloorWealth".Translate(),
-                        ref overrideChunkFloorWealth,
-                        "SmoothingExpanded.ChunkFloorWealthTooltip".Translate());
-                    Settings.ChunkFloorsHaveWealth = !overrideChunkFloorWealth;
-                    if (FloorWealthFeatureAvailable && overrideChunkFloorWealth)
-                    {
-                        listing.Label("SmoothingExpanded.ChunkFloorWealthValue".Translate(
-                            Settings.ChunkFloorWealthValue.ToString("0.0")));
-                        Settings.ChunkFloorWealthValue = (float)Math.Round(
-                            listing.Slider(Settings.ChunkFloorWealthValue, 0f, 100f) * 2f) / 2f;
-                    }
-                    GUI.enabled = chunkFloorGuiEnabled;
-
-                    listing.GapLine();
-                    listing.Label("SmoothingExpanded.ChunkBeautyHeader".Translate());
-                    bool overrideChunkWallBeauty = !Settings.ChunkWallsHaveBeauty;
-                    listing.CheckboxLabeled(
-                        "SmoothingExpanded.ChunkWallBeauty".Translate(),
-                        ref overrideChunkWallBeauty,
-                        "SmoothingExpanded.ChunkWallBeautyTooltip".Translate());
-                    Settings.ChunkWallsHaveBeauty = !overrideChunkWallBeauty;
-                    if (overrideChunkWallBeauty)
-                    {
-                        listing.Label("SmoothingExpanded.ChunkWallBeautyValue".Translate(
-                            Settings.ChunkWallBeautyValue.ToString("0")));
-                        Settings.ChunkWallBeautyValue = (float)Math.Round(
-                            listing.Slider(Settings.ChunkWallBeautyValue, -10f, 20f));
-                    }
-
-                    bool overrideChunkFloorBeauty = !Settings.ChunkFloorsHaveBeauty;
-                    listing.CheckboxLabeled(
-                        "SmoothingExpanded.ChunkFloorBeauty".Translate(),
-                        ref overrideChunkFloorBeauty,
-                        "SmoothingExpanded.ChunkFloorBeautyTooltip".Translate());
-                    Settings.ChunkFloorsHaveBeauty = !overrideChunkFloorBeauty;
-                    if (overrideChunkFloorBeauty)
-                    {
-                        listing.Label("SmoothingExpanded.ChunkFloorBeautyValue".Translate(
-                            Settings.ChunkFloorBeautyValue.ToString("0")));
-                        Settings.ChunkFloorBeautyValue = (float)Math.Round(
-                            listing.Slider(Settings.ChunkFloorBeautyValue, -10f, 20f));
-                    }
-                }
-                listing.GapLine();
-                listing.Label("SmoothingExpanded.ChunkConstructionExplanation".Translate());
-            }
-            }
-
-            // Completed natural-result surfaces are already vanilla, but their
-            // unfinished blueprints and frames still reference this mod. Keep the
-            // tool available in every mode so it can make a save uninstall-safe.
-            if (Settings.EnableChunkConstruction)
-            {
-                listing.GapLine();
-                showUninstallSettings = DrawSectionButton(
-                    listing, "SmoothingExpanded.Section.Uninstall".Translate(), showUninstallSettings);
-                if (showUninstallSettings)
-                {
-                listing.Label("SmoothingExpanded.UninstallExplanation".Translate());
-                bool conversionGuiEnabled = GUI.enabled;
-                bool hasLoadedMaps = Current.Game != null && Find.Maps != null && Find.Maps.Count > 0;
-                GUI.enabled = conversionGuiEnabled && hasLoadedMaps;
-                float conversionButtonTop = listing.CurHeight;
-                if (listing.ButtonText("SmoothingExpanded.PrepareUninstall".Translate()))
-                {
-                    ChunkConstructionController.ShowConversionConfirmation();
-                }
-                GUI.enabled = conversionGuiEnabled;
-                if (!hasLoadedMaps)
-                {
-                    TooltipHandler.TipRegion(
-                        new Rect(viewRect.x, conversionButtonTop, viewRect.width, 30f),
-                        "SmoothingExpanded.LoadSaveTooltip".Translate());
-                }
-                }
-            }
-
-            listing.GapLine();
-            if (listing.ButtonText("SmoothingExpanded.ResetAll".Translate()))
-            {
-                if (Settings.EnableChunkConstruction)
-                {
-                    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
-                        "SmoothingExpanded.ResetWarning".Translate(),
-                        ResetAllSettingsToDefaults,
-                        false,
-                        "SmoothingExpanded.ResetTitle".Translate()));
-                }
-                else
-                {
-                    ResetAllSettingsToDefaults();
-                }
-            }
-
-            listing.End();
-            Widgets.EndScrollView();
             if (previousSpeedMultiplier != Settings.SpeedMultiplier ||
                 previousInstantSmoothing != Settings.InstantSmoothing ||
                 previousFloorSpeedMultiplier != Settings.FloorSpeedMultiplier ||
@@ -749,16 +473,368 @@ namespace Lordlony.SmoothingExpanded
             }
         }
 
-        private static bool DrawSectionButton(
-            Listing_Standard listing,
-            string label,
-            bool expanded)
+        private void DrawPageNavigation(Rect inRect)
         {
-            if (listing.ButtonText((expanded ? "▼  " : "▶  ") + label))
+            string[] labels =
             {
-                expanded = !expanded;
+                "SmoothingExpanded.Page.Home".Translate(),
+                "SmoothingExpanded.Page.Smoothing".Translate(),
+                "SmoothingExpanded.Page.Vanilla".Translate(),
+                "SmoothingExpanded.Page.Chunk".Translate(),
+                "SmoothingExpanded.Page.SaveSafety".Translate()
+            };
+            float width = inRect.width / labels.Length;
+            for (int i = 0; i < labels.Length; i++)
+            {
+                Rect button = new Rect(inRect.x + width * i, inRect.y,
+                    width - 3f, 30f);
+                if (DrawTabButton(button, labels[i], settingsPage == i))
+                {
+                    settingsPage = i;
+                }
             }
-            return expanded;
+        }
+
+        private static bool DrawTabButton(Rect rect, string label, bool selected)
+        {
+            // Match Configurable Special Trees: use RimWorld's selected and
+            // unselected option assets so UI replacers style both states.
+            Widgets.DrawOptionBackground(rect, selected);
+            TextAnchor oldAnchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(rect.ContractedBy(4f), label);
+            Text.Anchor = oldAnchor;
+            return !selected && Widgets.ButtonInvisible(rect);
+        }
+
+        private void DrawHomePage(Rect pageRect)
+        {
+            BeginPage(pageRect, 0, delegate(Listing_Standard listing)
+            {
+                listing.Label("SmoothingExpanded.HomeIntroduction".Translate());
+                listing.GapLine();
+                listing.Label("SmoothingExpanded.HomeCapabilityHeader".Translate());
+                listing.Label((FloorSpeedFeatureAvailable
+                    ? "SmoothingExpanded.CapabilityFloorSpeedAvailable"
+                    : "SmoothingExpanded.CapabilityFloorSpeedUnavailable").Translate());
+                listing.Label((FloorWealthFeatureAvailable
+                    ? "SmoothingExpanded.CapabilityFloorWealthAvailable"
+                    : "SmoothingExpanded.CapabilityFloorWealthUnavailable").Translate());
+                listing.Label((Current.Game != null && Find.Maps != null && Find.Maps.Count > 0
+                    ? "SmoothingExpanded.CapabilitySaveLoaded"
+                    : "SmoothingExpanded.CapabilityNoSaveLoaded").Translate());
+                listing.GapLine();
+                bool oldEnabled = GUI.enabled;
+                GUI.enabled = oldEnabled && AnySettingsDifferFromDefaults();
+                if (listing.ButtonText("SmoothingExpanded.ResetAll".Translate()))
+                {
+                    RequestResetAllSettingsToDefaults();
+                }
+                GUI.enabled = oldEnabled;
+            });
+        }
+
+        private void DrawSmoothingPage(Rect pageRect)
+        {
+            BeginPage(pageRect, 1, delegate(Listing_Standard listing)
+            {
+                listing.Label("SmoothingExpanded.WallSpeed".Translate(
+                    Settings.InstantSmoothing ? "SmoothingExpanded.InstantValue".Translate()
+                    : Settings.SpeedMultiplier.ToString("0.00") + "x"));
+                DrawSpeedControls(listing, ref Settings.SpeedMultiplier,
+                    ref Settings.InstantSmoothing, true);
+                listing.Label("SmoothingExpanded.SpeedExplanation".Translate());
+                listing.GapLine();
+                listing.Label((FloorSpeedFeatureAvailable
+                    ? "SmoothingExpanded.CapabilityFloorSpeedAvailable"
+                    : "SmoothingExpanded.CapabilityFloorSpeedUnavailable").Translate());
+                listing.Label("SmoothingExpanded.FloorSpeed".Translate(
+                    Settings.InstantFloorSmoothing ? "SmoothingExpanded.InstantValue".Translate()
+                    : Settings.FloorSpeedMultiplier.ToString("0.00") + "x"));
+                bool oldEnabled = GUI.enabled;
+                GUI.enabled = oldEnabled && FloorSpeedFeatureAvailable;
+                DrawSpeedControls(listing, ref Settings.FloorSpeedMultiplier,
+                    ref Settings.InstantFloorSmoothing, false);
+                GUI.enabled = oldEnabled;
+                if (!FloorSpeedFeatureAvailable)
+                {
+                    listing.Label("SmoothingExpanded.RequiresHarmonyTooltip".Translate());
+                }
+                listing.GapLine();
+                if (listing.ButtonText("SmoothingExpanded.ResetSmoothing".Translate()))
+                {
+                    ResetSmoothingSettingsToDefaults();
+                }
+            });
+        }
+
+        private static void DrawSpeedControls(Listing_Standard listing,
+            ref float multiplier, ref bool instant, bool wall)
+        {
+            Rect row = listing.GetRect(30f);
+            Rect slider = new Rect(row.x, row.y, row.width * 0.70f, row.height);
+            Rect check = new Rect(row.x + row.width * 0.72f, row.y,
+                row.width * 0.28f, row.height);
+            bool oldEnabled = GUI.enabled;
+            GUI.enabled = oldEnabled && !instant;
+            multiplier = Widgets.HorizontalSlider(slider, multiplier, 0.25f, 10f, true);
+            GUI.enabled = oldEnabled;
+            Widgets.CheckboxLabeled(check, "SmoothingExpanded.Instant".Translate(), ref instant);
+            TooltipHandler.TipRegion(check, (wall
+                ? "SmoothingExpanded.InstantWallTooltip"
+                : "SmoothingExpanded.InstantFloorTooltip").Translate());
+            multiplier = (float)Math.Round(multiplier * 4f) / 4f;
+        }
+
+        private void DrawVanillaSurfacesPage(Rect pageRect)
+        {
+            BeginPage(pageRect, 2, delegate(Listing_Standard listing)
+            {
+                listing.Label("SmoothingExpanded.NaturalWealthHeader".Translate());
+                listing.CheckboxLabeled("SmoothingExpanded.OverrideNaturalWallWealth".Translate(),
+                    ref Settings.OverrideWallWealth,
+                    "SmoothingExpanded.OverrideNaturalWallWealthTooltip".Translate());
+                if (Settings.OverrideWallWealth)
+                {
+                    listing.Label("SmoothingExpanded.NaturalWallValue".Translate(Settings.SmoothedWallValue.ToString("0.0")));
+                    Settings.SmoothedWallValue = RoundHalf(listing.Slider(Settings.SmoothedWallValue, 0f, 100f));
+                }
+                listing.Label((FloorWealthFeatureAvailable
+                    ? "SmoothingExpanded.CapabilityFloorWealthAvailable"
+                    : "SmoothingExpanded.CapabilityFloorWealthUnavailable").Translate());
+                bool oldEnabled = GUI.enabled;
+                GUI.enabled = oldEnabled && FloorWealthFeatureAvailable;
+                listing.CheckboxLabeled("SmoothingExpanded.OverrideNaturalFloorWealth".Translate(),
+                    ref Settings.OverrideFloorWealth,
+                    "SmoothingExpanded.OverrideNaturalFloorWealthTooltip".Translate());
+                GUI.enabled = oldEnabled;
+                if (FloorWealthFeatureAvailable && Settings.OverrideFloorWealth)
+                {
+                    listing.Label("SmoothingExpanded.NaturalFloorValue".Translate(Settings.SmoothedFloorValue.ToString("0.0")));
+                    Settings.SmoothedFloorValue = RoundHalf(listing.Slider(Settings.SmoothedFloorValue, 0f, 100f));
+                    listing.Label("SmoothingExpanded.FloorWealthWarning".Translate());
+                }
+                listing.GapLine();
+                listing.Label("SmoothingExpanded.NaturalBeautyHeader".Translate());
+                DrawBeautyControls(listing, "SmoothingExpanded.RemoveNaturalWallBeauty",
+                    "SmoothingExpanded.RemoveNaturalWallBeautyTooltip",
+                    "SmoothingExpanded.NaturalWallBeautyValue",
+                    ref Settings.RemoveNaturalWallBeauty, ref Settings.SmoothedWallBeauty);
+                DrawBeautyControls(listing, "SmoothingExpanded.RemoveNaturalFloorBeauty",
+                    "SmoothingExpanded.RemoveNaturalFloorBeautyTooltip",
+                    "SmoothingExpanded.NaturalFloorBeautyValue",
+                    ref Settings.RemoveNaturalFloorBeauty, ref Settings.SmoothedFloorBeauty);
+                listing.GapLine();
+                if (listing.ButtonText("SmoothingExpanded.ResetVanillaSurfaces".Translate()))
+                {
+                    ResetVanillaSurfaceSettingsToDefaults();
+                }
+            });
+        }
+
+        private static void DrawBeautyControls(Listing_Standard listing, string label,
+            string tooltip, string valueLabel, ref bool enabled, ref float value)
+        {
+            listing.CheckboxLabeled(label.Translate(), ref enabled, tooltip.Translate());
+            if (enabled)
+            {
+                listing.Label(valueLabel.Translate(value.ToString("0")));
+                value = (float)Math.Round(listing.Slider(value, -10f, 20f));
+            }
+        }
+
+        private void DrawChunkConstructionPage(Rect pageRect)
+        {
+            BeginPage(pageRect, 3, delegate(Listing_Standard listing)
+            {
+                bool wasEnabled = Settings.EnableChunkConstruction;
+                listing.CheckboxLabeled("SmoothingExpanded.EnableChunkConstruction".Translate(),
+                    ref Settings.EnableChunkConstruction,
+                    "SmoothingExpanded.EnableChunkConstructionTooltip".Translate());
+                if (wasEnabled && !Settings.EnableChunkConstruction)
+                {
+                    ConfirmChunkDisable();
+                }
+                listing.Label("SmoothingExpanded.UninstallWarning".Translate());
+                if (Settings.EnableChunkConstruction)
+                {
+                    DrawChunkOptions(listing);
+                }
+                listing.GapLine();
+                if (listing.ButtonText("SmoothingExpanded.ResetChunkSettings".Translate()))
+                {
+                    if (Settings.EnableChunkConstruction) { ConfirmChunkReset(); }
+                    else { ResetChunkSettingsToDefaults(); }
+                }
+            });
+        }
+
+        private void DrawChunkOptions(Listing_Standard listing)
+        {
+            listing.Label("SmoothingExpanded.ChunkResultHeader".Translate());
+            if (listing.RadioButton("SmoothingExpanded.ChunkResultConstructed".Translate(), Settings.ChunkSurfaceResultMode == 0)) Settings.ChunkSurfaceResultMode = 0;
+            if (listing.RadioButton("SmoothingExpanded.ChunkResultNatural".Translate(), Settings.ChunkSurfaceResultMode == 1)) Settings.ChunkSurfaceResultMode = 1;
+            if (listing.RadioButton("SmoothingExpanded.ChunkResultBoth".Translate(), Settings.ChunkSurfaceResultMode == 2)) Settings.ChunkSurfaceResultMode = 2;
+            listing.Label("SmoothingExpanded.NaturalResultExplanation".Translate());
+            if (Settings.ChunkSurfaceResultMode == 1) return;
+            listing.GapLine();
+            listing.Label("SmoothingExpanded.ChunkWealthHeader".Translate());
+            DrawChunkOverride(listing, "SmoothingExpanded.ChunkWallWealth", "SmoothingExpanded.ChunkWallWealthTooltip", "SmoothingExpanded.ChunkWallWealthValue", ref Settings.ChunkWallsHaveWealth, ref Settings.ChunkWallWealthValue, 0f, 100f, true);
+            listing.Label((FloorWealthFeatureAvailable ? "SmoothingExpanded.CapabilityFloorWealthAvailable" : "SmoothingExpanded.CapabilityFloorWealthUnavailable").Translate());
+            bool oldEnabled = GUI.enabled;
+            GUI.enabled = oldEnabled && FloorWealthFeatureAvailable;
+            DrawChunkOverride(listing, "SmoothingExpanded.ChunkFloorWealth", "SmoothingExpanded.ChunkFloorWealthTooltip", "SmoothingExpanded.ChunkFloorWealthValue", ref Settings.ChunkFloorsHaveWealth, ref Settings.ChunkFloorWealthValue, 0f, 100f, true);
+            GUI.enabled = oldEnabled;
+            listing.GapLine();
+            listing.Label("SmoothingExpanded.ChunkBeautyHeader".Translate());
+            DrawChunkOverride(listing, "SmoothingExpanded.ChunkWallBeauty", "SmoothingExpanded.ChunkWallBeautyTooltip", "SmoothingExpanded.ChunkWallBeautyValue", ref Settings.ChunkWallsHaveBeauty, ref Settings.ChunkWallBeautyValue, -10f, 20f, false);
+            DrawChunkOverride(listing, "SmoothingExpanded.ChunkFloorBeauty", "SmoothingExpanded.ChunkFloorBeautyTooltip", "SmoothingExpanded.ChunkFloorBeautyValue", ref Settings.ChunkFloorsHaveBeauty, ref Settings.ChunkFloorBeautyValue, -10f, 20f, false);
+            listing.GapLine();
+            listing.Label("SmoothingExpanded.ChunkConstructionExplanation".Translate());
+        }
+
+        private static void DrawChunkOverride(Listing_Standard listing, string label,
+            string tooltip, string valueLabel, ref bool inherited, ref float value,
+            float min, float max, bool halves)
+        {
+            bool overrideValue = !inherited;
+            listing.CheckboxLabeled(label.Translate(), ref overrideValue, tooltip.Translate());
+            inherited = !overrideValue;
+            if (overrideValue)
+            {
+                listing.Label(valueLabel.Translate(value.ToString(halves ? "0.0" : "0")));
+                value = listing.Slider(value, min, max);
+                value = halves ? RoundHalf(value) : (float)Math.Round(value);
+            }
+        }
+
+        private void DrawSaveSafetyPage(Rect pageRect)
+        {
+            BeginPage(pageRect, 4, delegate(Listing_Standard listing)
+            {
+                // Keep irreversible save conversion apart from ordinary tuning.
+                listing.Label("SmoothingExpanded.SaveSafetyIntroduction".Translate());
+                listing.Label("SmoothingExpanded.UninstallExplanation".Translate());
+                bool hasLoadedMaps = Current.Game != null && Find.Maps != null && Find.Maps.Count > 0;
+                listing.Label((hasLoadedMaps ? "SmoothingExpanded.CapabilitySaveLoaded" : "SmoothingExpanded.CapabilityNoSaveLoaded").Translate());
+                bool oldEnabled = GUI.enabled;
+                GUI.enabled = oldEnabled && hasLoadedMaps;
+                float buttonTop = listing.CurHeight;
+                if (listing.ButtonText("SmoothingExpanded.PrepareUninstall".Translate()))
+                {
+                    ChunkConstructionController.ShowConversionConfirmation();
+                }
+                GUI.enabled = oldEnabled;
+                if (!hasLoadedMaps)
+                {
+                    TooltipHandler.TipRegion(new Rect(pageRect.x, buttonTop, pageRect.width, 30f),
+                        "SmoothingExpanded.LoadSaveTooltip".Translate());
+                }
+            });
+        }
+
+        private void BeginPage(Rect pageRect, int page, Action<Listing_Standard> draw)
+        {
+            float contentHeight = settingsPageContentHeights[page];
+            float maxScroll = Math.Max(0f, contentHeight - pageRect.height);
+            settingsPageScrollPositions[page].y = Mathf.Clamp(
+                settingsPageScrollPositions[page].y, 0f, maxScroll);
+            Rect viewRect = new Rect(0f, 0f, pageRect.width - 18f,
+                Math.Max(pageRect.height, contentHeight));
+            Widgets.BeginScrollView(pageRect, ref settingsPageScrollPositions[page], viewRect);
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(viewRect);
+            draw(listing);
+            // Use the previously measured height for this event, then retain the
+            // height actually consumed by the listing for the next one. This
+            // keeps optional controls and translated text out of a fixed canvas.
+            settingsPageContentHeights[page] = listing.CurHeight + 8f;
+            settingsPageScrollPositions[page].y = Mathf.Clamp(
+                settingsPageScrollPositions[page].y, 0f,
+                Math.Max(0f, settingsPageContentHeights[page] - pageRect.height));
+            listing.End();
+            Widgets.EndScrollView();
+        }
+
+        private void ConfirmChunkDisable()
+        {
+            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+                "SmoothingExpanded.DisableChunkWarning".Translate(), delegate { },
+                delegate { Settings.EnableChunkConstruction = true; }, false,
+                "SmoothingExpanded.DisableChunkTitle".Translate()));
+        }
+
+        private void ConfirmChunkReset()
+        {
+            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+                "SmoothingExpanded.ResetChunkWarning".Translate(),
+                ResetChunkSettingsToDefaults, false,
+                "SmoothingExpanded.ResetChunkTitle".Translate()));
+        }
+
+        private void RequestResetAllSettingsToDefaults()
+        {
+            if (Settings.EnableChunkConstruction)
+            {
+                Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+                    "SmoothingExpanded.ResetWarning".Translate(),
+                    ResetAllSettingsToDefaults, false,
+                    "SmoothingExpanded.ResetTitle".Translate()));
+            }
+            else
+            {
+                ResetAllSettingsToDefaults();
+            }
+        }
+
+        private static float RoundHalf(float value)
+        {
+            return (float)Math.Round(value * 2f) / 2f;
+        }
+
+        private static void ResetSmoothingSettingsToDefaults()
+        {
+            Settings.SpeedMultiplier = 2f;
+            Settings.InstantSmoothing = false;
+            Settings.FloorSpeedMultiplier = 2f;
+            Settings.InstantFloorSmoothing = false;
+        }
+
+        private static void ResetVanillaSurfaceSettingsToDefaults()
+        {
+            Settings.OverrideWallWealth = false;
+            Settings.SmoothedWallValue = 0f;
+            Settings.OverrideFloorWealth = false;
+            Settings.SmoothedFloorValue = 0f;
+            Settings.RemoveNaturalWallBeauty = false;
+            Settings.SmoothedWallBeauty = 0f;
+            Settings.RemoveNaturalFloorBeauty = false;
+            Settings.SmoothedFloorBeauty = 0f;
+            SmoothingSpeedController.ApplyWallWealthOverride();
+            SmoothingSpeedController.ApplyBeautyOverrides();
+            if (Find.CurrentMap != null) Find.CurrentMap.wealthWatcher.ForceRecount(true);
+        }
+
+        private static void ResetAllSettingsToDefaults()
+        {
+            ResetSmoothingSettingsToDefaults();
+            ResetVanillaSurfaceSettingsToDefaults();
+            ResetChunkSettingsToDefaults();
+        }
+
+        private static bool AnySettingsDifferFromDefaults()
+        {
+            return Settings.SpeedMultiplier != 2f || Settings.InstantSmoothing ||
+                Settings.FloorSpeedMultiplier != 2f || Settings.InstantFloorSmoothing ||
+                Settings.OverrideWallWealth || Settings.SmoothedWallValue != 0f ||
+                Settings.OverrideFloorWealth || Settings.SmoothedFloorValue != 0f ||
+                Settings.RemoveNaturalWallBeauty || Settings.SmoothedWallBeauty != 0f ||
+                Settings.RemoveNaturalFloorBeauty || Settings.SmoothedFloorBeauty != 0f ||
+                Settings.EnableChunkConstruction || Settings.ChunkSurfaceResultMode != 0 ||
+                !Settings.ChunkWallsHaveWealth || Settings.ChunkWallWealthValue != 0f ||
+                !Settings.ChunkFloorsHaveWealth || Settings.ChunkFloorWealthValue != 0f ||
+                !Settings.ChunkWallsHaveBeauty || Settings.ChunkWallBeautyValue != 0f ||
+                !Settings.ChunkFloorsHaveBeauty || Settings.ChunkFloorBeautyValue != 0f;
         }
 
         internal static void ResetChunkSettingsToDefaults()
@@ -778,30 +854,6 @@ namespace Lordlony.SmoothingExpanded
             Settings.ChunkFloorsHaveBeauty = true;
             Settings.ChunkFloorBeautyValue = 0f;
             Settings.Write();
-        }
-
-        private static void ResetAllSettingsToDefaults()
-        {
-            Settings.SpeedMultiplier = 2f;
-            Settings.InstantSmoothing = false;
-            Settings.FloorSpeedMultiplier = 2f;
-            Settings.InstantFloorSmoothing = false;
-            Settings.OverrideWallWealth = false;
-            Settings.SmoothedWallValue = 0f;
-            Settings.OverrideFloorWealth = false;
-            Settings.SmoothedFloorValue = 0f;
-            Settings.RemoveNaturalWallBeauty = false;
-            Settings.SmoothedWallBeauty = 0f;
-            Settings.RemoveNaturalFloorBeauty = false;
-            Settings.SmoothedFloorBeauty = 0f;
-            ResetChunkSettingsToDefaults();
-            SmoothingSpeedController.Apply();
-            SmoothingSpeedController.ApplyWallWealthOverride();
-            SmoothingSpeedController.ApplyBeautyOverrides();
-            if (Find.CurrentMap != null)
-            {
-                Find.CurrentMap.wealthWatcher.ForceRecount(true);
-            }
         }
 
         public override void WriteSettings()

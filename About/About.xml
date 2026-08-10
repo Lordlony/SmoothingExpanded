@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Smoothing Expanded</name>
   <author>Lordlony</author>
-  <modVersion>0.49.1</modVersion>
+  <modVersion>1.0.0</modVersion>
   <packageId>lordlony.smoothingexpanded</packageId>
   <supportedVersions>
     <li>1.6</li>

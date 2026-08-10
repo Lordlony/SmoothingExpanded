@@ -71,4 +71,23 @@
   <SmoothingExpanded.ConversionWarning>Преобразовать все гладкие стены и полы из обломков на всех загруженных картах?\n\nСтены станут добываемыми ванильными гладкими стенами. Полы станут постоянными ванильными гладкими полами. Незавершённые чертежи и каркасы будут отменены, а доставленные ресурсы возвращены. Автоматически отменить это действие нельзя. Сначала сделайте резервную копию.</SmoothingExpanded.ConversionWarning>
   <SmoothingExpanded.ConversionReport>Преобразование завершено: преобразовано клеток пола — {0}, стен — {1}, загруженных карт — {2}; отменено незавершённых чертежей/каркасов — {3}. Настройки строительства из обломков сброшены; для обновления Архитектора перезапустите игру. Сохранитесь перед удалением мода.</SmoothingExpanded.ConversionReport>
   <SmoothingExpanded.ConversionIncomplete>Подготовка к удалению не завершена: в сохранении осталось пользовательских поверхностей — {0}. Настройки не были сброшены. Не удаляйте мод; проверьте журнал ошибок и повторите попытку.</SmoothingExpanded.ConversionIncomplete>
+  <SmoothingExpanded.Page.Home>Home</SmoothingExpanded.Page.Home>
+  <SmoothingExpanded.Page.Smoothing>Smoothing</SmoothingExpanded.Page.Smoothing>
+  <SmoothingExpanded.Page.Vanilla>Vanilla Surfaces</SmoothingExpanded.Page.Vanilla>
+  <SmoothingExpanded.Page.Chunk>Chunk Construction</SmoothingExpanded.Page.Chunk>
+  <SmoothingExpanded.Page.SaveSafety>Save Safety</SmoothingExpanded.Page.SaveSafety>
+  <SmoothingExpanded.HomeIntroduction>Choose a page to adjust smoothing, surface overrides, or chunk construction. Save conversion is intentionally kept on its own page.</SmoothingExpanded.HomeIntroduction>
+  <SmoothingExpanded.HomeCapabilityHeader>Current availability</SmoothingExpanded.HomeCapabilityHeader>
+  <SmoothingExpanded.CapabilityFloorSpeedAvailable>Separate floor smoothing speed: available through Harmony.</SmoothingExpanded.CapabilityFloorSpeedAvailable>
+  <SmoothingExpanded.CapabilityFloorSpeedUnavailable>Separate floor smoothing speed: unavailable; floors use the wall settings without Harmony.</SmoothingExpanded.CapabilityFloorSpeedUnavailable>
+  <SmoothingExpanded.CapabilityFloorWealthAvailable>Floor wealth overrides: available through Harmony.</SmoothingExpanded.CapabilityFloorWealthAvailable>
+  <SmoothingExpanded.CapabilityFloorWealthUnavailable>Floor wealth overrides: unavailable without Harmony.</SmoothingExpanded.CapabilityFloorWealthUnavailable>
+  <SmoothingExpanded.CapabilitySaveLoaded>Loaded save: save-preparation tools are available.</SmoothingExpanded.CapabilitySaveLoaded>
+  <SmoothingExpanded.CapabilityNoSaveLoaded>No loaded save: save-preparation tools are unavailable.</SmoothingExpanded.CapabilityNoSaveLoaded>
+  <SmoothingExpanded.ResetSmoothing>Reset smoothing settings to defaults</SmoothingExpanded.ResetSmoothing>
+  <SmoothingExpanded.ResetVanillaSurfaces>Reset vanilla-surface overrides to defaults</SmoothingExpanded.ResetVanillaSurfaces>
+  <SmoothingExpanded.ResetChunkSettings>Reset chunk-construction settings to defaults</SmoothingExpanded.ResetChunkSettings>
+  <SmoothingExpanded.ResetChunkTitle>Reset chunk-construction settings</SmoothingExpanded.ResetChunkTitle>
+  <SmoothingExpanded.ResetChunkWarning>Resetting chunk-construction settings will disable chunk-built construction. If this save contains completed custom surfaces or unfinished construction, cancel and use 'Prepare loaded save for uninstall' first.\n\nReset chunk-construction settings anyway?</SmoothingExpanded.ResetChunkWarning>
+  <SmoothingExpanded.SaveSafetyIntroduction>These tools can change the loaded save. Back up the save before continuing.</SmoothingExpanded.SaveSafetyIntroduction>
 </LanguageData>
