@@ -2,6 +2,9 @@
 
 Make RimWorld's natural stone smoothing faster, optionally adjust its wealth or beauty, and build smooth stone directly from raw chunks.
 
+[h2]Source and development[/h2]
+Source code, build instructions, validation tooling and the component-reuse terms are available on [url=https://github.com/Lordlony/SmoothingExpanded]GitHub[/url]. The Workshop download contains only the runtime files needed by RimWorld.
+
 [h2]Features[/h2]
 [list]
 [*]Separate adjustable wall and floor smoothing speeds from 0.25x to 10x (default 2x)
