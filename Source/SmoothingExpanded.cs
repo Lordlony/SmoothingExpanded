@@ -445,7 +445,8 @@ namespace Lordlony.SmoothingExpanded
             bool previousNaturalFloorBeauty = Settings.RemoveNaturalFloorBeauty;
             float previousNaturalFloorBeautyValue = Settings.SmoothedFloorBeauty;
 
-            DrawPageNavigation(inRect);
+            DrawPageNavigation(new Rect(inRect.x + 4f, inRect.y,
+                inRect.width - 8f, 30f));
             Rect pageRect = new Rect(inRect.x, inRect.y + 36f, inRect.width,
                 inRect.height - 36f);
             switch (settingsPage)
@@ -735,7 +736,11 @@ namespace Lordlony.SmoothingExpanded
 
         private void BeginPage(Rect pageRect, int page, Action<Listing_Standard> draw)
         {
-            float contentHeight = settingsPageContentHeights[page];
+            // Match CST's viewport convention: an estimate handles controls
+            // revealed during this event, while the last measured layout keeps
+            // translated text and future frames exact.
+            float contentHeight = Mathf.Max(settingsPageContentHeights[page],
+                GetPageEstimatedContentHeight(page, pageRect.width - 18f));
             float maxScroll = Math.Max(0f, contentHeight - pageRect.height);
             settingsPageScrollPositions[page].y = Mathf.Clamp(
                 settingsPageScrollPositions[page].y, 0f, maxScroll);
@@ -754,6 +759,70 @@ namespace Lordlony.SmoothingExpanded
                 Math.Max(0f, settingsPageContentHeights[page] - pageRect.height));
             listing.End();
             Widgets.EndScrollView();
+        }
+
+        private static float GetPageEstimatedContentHeight(int page, float width)
+        {
+            if (page != 3)
+            {
+                return 0f;
+            }
+
+            // Chunk options can become visible from a click in this same IMGUI
+            // event. Reserve only their current rows so BeginScrollView knows
+            // immediately when it needs a scrollbar; the measured height above
+            // remains the authority once the page has been drawn.
+            float height = 30f + EstimateLabelHeight(
+                "SmoothingExpanded.UninstallWarning".Translate(), width);
+            if (!Settings.EnableChunkConstruction)
+            {
+                return height + 42f;
+            }
+
+            height += EstimateLabelHeight(
+                "SmoothingExpanded.ChunkResultHeader".Translate(), width);
+            height += 3f * 30f;
+            height += EstimateLabelHeight(
+                "SmoothingExpanded.NaturalResultExplanation".Translate(), width);
+            if (Settings.ChunkSurfaceResultMode == 1)
+            {
+                return height + 42f;
+            }
+
+            height += 12f + EstimateLabelHeight(
+                "SmoothingExpanded.ChunkWealthHeader".Translate(), width);
+            height += EstimateChunkOverrideHeight(
+                "SmoothingExpanded.ChunkWallWealth".Translate(), width,
+                !Settings.ChunkWallsHaveWealth);
+            height += EstimateLabelHeight((FloorWealthFeatureAvailable
+                ? "SmoothingExpanded.CapabilityFloorWealthAvailable"
+                : "SmoothingExpanded.CapabilityFloorWealthUnavailable").Translate(), width);
+            height += EstimateChunkOverrideHeight(
+                "SmoothingExpanded.ChunkFloorWealth".Translate(), width,
+                !Settings.ChunkFloorsHaveWealth);
+            height += 12f + EstimateLabelHeight(
+                "SmoothingExpanded.ChunkBeautyHeader".Translate(), width);
+            height += EstimateChunkOverrideHeight(
+                "SmoothingExpanded.ChunkWallBeauty".Translate(), width,
+                !Settings.ChunkWallsHaveBeauty);
+            height += EstimateChunkOverrideHeight(
+                "SmoothingExpanded.ChunkFloorBeauty".Translate(), width,
+                !Settings.ChunkFloorsHaveBeauty);
+            height += 12f + EstimateLabelHeight(
+                "SmoothingExpanded.ChunkConstructionExplanation".Translate(), width);
+            return height + 42f;
+        }
+
+        private static float EstimateChunkOverrideHeight(string label, float width,
+            bool showsValue)
+        {
+            return Mathf.Max(30f, EstimateLabelHeight(label, width)) +
+                (showsValue ? Text.LineHeight + 30f : 0f);
+        }
+
+        private static float EstimateLabelHeight(string label, float width)
+        {
+            return Mathf.Max(Text.LineHeight, Text.CalcHeight(label, width)) + 2f;
         }
 
         private void ConfirmChunkDisable()

@@ -1,5 +1,13 @@
 # Smoothing Expanded changelog
 
+## [1.0.1] - 2026-08-10
+
+### UI fixes
+
+- Fixed the Chunk Construction page scrollbar when its visible controls exceed
+  the settings-window height.
+- Fixed selected-tab highlights clipping at the edges of the settings window.
+
 ## [1.0.0] - 2026-08-10
 
 ### Settings interface

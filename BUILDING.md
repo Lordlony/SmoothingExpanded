@@ -1,4 +1,4 @@
-# Building Smoothing Expanded 1.0.0
+# Building Smoothing Expanded 1.0.1
 
 Requirements:
 

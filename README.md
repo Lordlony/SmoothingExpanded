@@ -16,7 +16,7 @@ A RimWorld 1.6 mod that:
 - adds matching Vacstone construction automatically when Odyssey is active;
 - leaves vanilla constructed walls, vanilla floors and unsmoothed rock unchanged.
 
-Version 1.0.0. Created by Lordlony, with development assistance and code review
+Version 1.0.1. Created by Lordlony, with development assistance and code review
 from OpenAI Codex.
 
 Smoothing Expanded adopts Semantic Versioning from 1.0.0 onward: patch releases
