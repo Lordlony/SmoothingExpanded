@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Constructed/deconstructible walls. -->
+  <SmoothingExpanded_ChunkSmoothWallSandstone.label>chunk-built smooth sandstone wall</SmoothingExpanded_ChunkSmoothWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothWallGranite.label>chunk-built smooth granite wall</SmoothingExpanded_ChunkSmoothWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.label>chunk-built smooth limestone wall</SmoothingExpanded_ChunkSmoothWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothWallSlate.label>chunk-built smooth slate wall</SmoothingExpanded_ChunkSmoothWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothWallMarble.label>chunk-built smooth marble wall</SmoothingExpanded_ChunkSmoothWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothWallSandstone.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothWallGranite.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothWallLimestone.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothWallSlate.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothWallMarble.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallMarble.description>
+
+  <!-- Short-lived construction proxies which become genuine natural walls. -->
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>vanilla smoothed sandstone wall</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>vanilla smoothed granite wall</SmoothingExpanded_ChunkSmoothNaturalWallGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>vanilla smoothed limestone wall</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>vanilla smoothed slate wall</SmoothingExpanded_ChunkSmoothNaturalWallSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>vanilla smoothed marble wall</SmoothingExpanded_ChunkSmoothNaturalWallMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallMarble.description>
+
+  <!-- Short-lived construction proxies which become genuine natural floors. -->
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>vanilla smoothed sandstone floor</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>vanilla smoothed granite floor</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>vanilla smoothed limestone floor</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>vanilla smoothed slate floor</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>vanilla smoothed marble floor</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorMarble.description>
+</LanguageData>

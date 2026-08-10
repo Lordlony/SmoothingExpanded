@@ -4,6 +4,13 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $errors = [System.Collections.Generic.List[string]]::new()
+$supportedLanguageFolders = @(
+    'Arabic', 'Brazilian', 'ChineseSimplified', 'ChineseTraditional', 'Czech',
+    'Danish', 'Dutch', 'English', 'Estonian', 'Finnish', 'French', 'German',
+    'Hungarian', 'Italian', 'Japanese', 'Korean', 'Norwegian', 'Polish',
+    'Portuguese', 'Romanian', 'Russian', 'Slovak', 'Spanish', 'SpanishLatin',
+    'Swedish', 'Turkish', 'Ukrainian'
+)
 
 $xmlFiles = Get-ChildItem -LiteralPath $ModRoot -Recurse -Filter '*.xml' -File |
     Where-Object { $_.FullName -notmatch '[\\/](bin|obj)[\\/]' }
@@ -25,6 +32,16 @@ function Get-Placeholders([string]$text) {
 function Test-LanguageTree([string]$languagesRoot) {
     $englishRoot = Join-Path $languagesRoot 'English'
     if (-not (Test-Path -LiteralPath $englishRoot)) { return }
+
+    # RimWorld does not fall back to English for missing mod language folders.
+    # Keep an explicit English fallback tree for every language Core exposes,
+    # while allowing translated folders to replace only their own text.
+    foreach ($languageName in $supportedLanguageFolders) {
+        $languageRoot = Join-Path $languagesRoot $languageName
+        if (-not (Test-Path -LiteralPath $languageRoot)) {
+            $errors.Add("Missing English fallback language folder: $languageRoot")
+        }
+    }
 
     $languageFolders = Get-ChildItem -LiteralPath $languagesRoot -Directory |
         Where-Object Name -ne 'English'

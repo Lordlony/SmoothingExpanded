@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Settings window. Translators may lengthen these strings; the window scrolls. -->
+  <SmoothingExpanded.SettingsCategory>Smoothing Expanded</SmoothingExpanded.SettingsCategory>
+  <SmoothingExpanded.Section.Speed>Speed multipliers</SmoothingExpanded.Section.Speed>
+  <SmoothingExpanded.Section.Natural>Vanilla smoothed walls and floors</SmoothingExpanded.Section.Natural>
+  <SmoothingExpanded.Section.Chunk>Chunk-built smoothed walls and floors</SmoothingExpanded.Section.Chunk>
+  <SmoothingExpanded.Section.Uninstall>Save preparation and uninstall safety</SmoothingExpanded.Section.Uninstall>
+  <SmoothingExpanded.Instant>Instant</SmoothingExpanded.Instant>
+  <SmoothingExpanded.InstantValue>instant</SmoothingExpanded.InstantValue>
+  <SmoothingExpanded.WallSpeed>Wall smoothing speed multiplier: {0}</SmoothingExpanded.WallSpeed>
+  <SmoothingExpanded.FloorSpeed>Floor smoothing speed multiplier: {0}</SmoothingExpanded.FloorSpeed>
+  <SmoothingExpanded.InstantWallTooltip>Makes smoothing effectively instant. Default off because this is a cheat-style option.</SmoothingExpanded.InstantWallTooltip>
+  <SmoothingExpanded.InstantFloorTooltip>Makes floor smoothing effectively instant. Requires Harmony. Default: off.</SmoothingExpanded.InstantFloorTooltip>
+  <SmoothingExpanded.SpeedExplanation>Vanilla is 1x. The default for this mod is 2x. Construction skill, manipulation, sight, and global work speed still apply normally.</SmoothingExpanded.SpeedExplanation>
+  <SmoothingExpanded.ResetWallSpeed>Reset wall speed to 2x</SmoothingExpanded.ResetWallSpeed>
+  <SmoothingExpanded.ResetFloorSpeed>Reset floor speed to 2x</SmoothingExpanded.ResetFloorSpeed>
+  <SmoothingExpanded.FloorSpeedHarmony>Harmony: enables a separate floor speed. Without it, floors use the wall speed.</SmoothingExpanded.FloorSpeedHarmony>
+  <SmoothingExpanded.NaturalWealthHeader>Smoothed-surface wealth</SmoothingExpanded.NaturalWealthHeader>
+  <SmoothingExpanded.OverrideNaturalWallWealth>Override vanilla smoothed-wall wealth (default: off)</SmoothingExpanded.OverrideNaturalWallWealth>
+  <SmoothingExpanded.OverrideNaturalWallWealthTooltip>Detected vanilla smoothed walls use the value selected below.</SmoothingExpanded.OverrideNaturalWallWealthTooltip>
+  <SmoothingExpanded.NaturalWallValue>Vanilla smoothed-wall value per tile: {0}</SmoothingExpanded.NaturalWallValue>
+  <SmoothingExpanded.ResetWallWealth>Reset wall wealth (off; value 0)</SmoothingExpanded.ResetWallWealth>
+  <SmoothingExpanded.FloorWealthHarmony>Requires Harmony.</SmoothingExpanded.FloorWealthHarmony>
+  <SmoothingExpanded.OverrideNaturalFloorWealth>Experimental: override vanilla smoothed-floor wealth (default: off)</SmoothingExpanded.OverrideNaturalFloorWealth>
+  <SmoothingExpanded.OverrideNaturalFloorWealthTooltip>Adjusts RimWorld's cached floor-wealth total after a recount. May conflict with mods that alter map wealth, raid wealth, or floor valuation.</SmoothingExpanded.OverrideNaturalFloorWealthTooltip>
+  <SmoothingExpanded.RequiresHarmonyTooltip>Requires Harmony. Wall speed and wall wealth remain available without it.</SmoothingExpanded.RequiresHarmonyTooltip>
+  <SmoothingExpanded.NaturalFloorValue>Vanilla smoothed-floor value per tile: {0}</SmoothingExpanded.NaturalFloorValue>
+  <SmoothingExpanded.FloorWealthWarning>Experimental; leave off for maximum compatibility. When off, the adjustment is skipped entirely.</SmoothingExpanded.FloorWealthWarning>
+  <SmoothingExpanded.ResetFloorWealth>Reset floor wealth (off; value 0)</SmoothingExpanded.ResetFloorWealth>
+  <SmoothingExpanded.NaturalBeautyHeader>Smoothed-surface beauty</SmoothingExpanded.NaturalBeautyHeader>
+  <SmoothingExpanded.RemoveNaturalWallBeauty>Override wall beauty (default: off)</SmoothingExpanded.RemoveNaturalWallBeauty>
+  <SmoothingExpanded.RemoveNaturalWallBeautyTooltip>Detected vanilla smoothed walls use the value selected below. Applies immediately; no Harmony required.</SmoothingExpanded.RemoveNaturalWallBeautyTooltip>
+  <SmoothingExpanded.NaturalWallBeautyValue>Vanilla smoothed-wall beauty: {0}</SmoothingExpanded.NaturalWallBeautyValue>
+  <SmoothingExpanded.RemoveNaturalFloorBeauty>Override floor beauty (default: off)</SmoothingExpanded.RemoveNaturalFloorBeauty>
+  <SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>Detected vanilla smoothed floors use the value selected below. Applies immediately; no Harmony required.</SmoothingExpanded.RemoveNaturalFloorBeautyTooltip>
+  <SmoothingExpanded.NaturalFloorBeautyValue>Vanilla smoothed-floor beauty: {0}</SmoothingExpanded.NaturalFloorBeautyValue>
+  <SmoothingExpanded.EnableChunkConstruction>Enable chunk-built smoothed walls and floors (restart required)</SmoothingExpanded.EnableChunkConstruction>
+  <SmoothingExpanded.EnableChunkConstructionTooltip>Adds chunk-built smoothed walls and floors for Core stone, plus Vacstone with Odyssey. Each tile costs one matching raw chunk. Architect entries are hidden while disabled.</SmoothingExpanded.EnableChunkConstructionTooltip>
+  <SmoothingExpanded.DisableChunkTitle>Disable chunk-built construction</SmoothingExpanded.DisableChunkTitle>
+  <SmoothingExpanded.DisableChunkWarning>Chunk-built construction has been switched off. Existing chunk-built surfaces remain in the save. Before uninstalling, use 'Prepare loaded save for uninstall' to convert them and cancel unfinished construction.\n\nContinue with chunk-built construction disabled?</SmoothingExpanded.DisableChunkWarning>
+  <SmoothingExpanded.UninstallWarning>Vanilla-result surfaces are uninstall-safe. Deconstructible walls and removable floors must be converted before removing this mod.</SmoothingExpanded.UninstallWarning>
+  <SmoothingExpanded.ChunkResultHeader>Construction result (restart required)</SmoothingExpanded.ChunkResultHeader>
+  <SmoothingExpanded.ChunkResultConstructed>Chunk-built: deconstructible walls and removable floors (default)</SmoothingExpanded.ChunkResultConstructed>
+  <SmoothingExpanded.ChunkResultNatural>Vanilla: mineable walls and permanent floors</SmoothingExpanded.ChunkResultNatural>
+  <SmoothingExpanded.ChunkResultBoth>Show both result types</SmoothingExpanded.ChunkResultBoth>
+  <SmoothingExpanded.NaturalResultExplanation>Vanilla-result construction consumes one chunk and the normal work, then becomes a genuine vanilla smoothed surface. Walls are mineable; floors are permanent. Both remain if this mod is removed.</SmoothingExpanded.NaturalResultExplanation>
+  <SmoothingExpanded.ChunkWealthHeader>Chunk-built surface wealth</SmoothingExpanded.ChunkWealthHeader>
+  <SmoothingExpanded.ChunkWallWealth>Override wall wealth (restart required)</SmoothingExpanded.ChunkWallWealth>
+  <SmoothingExpanded.ChunkWallWealthTooltip>When enabled, all chunk-built walls use the value selected below. When disabled, each uses its corresponding stone-block wall value.</SmoothingExpanded.ChunkWallWealthTooltip>
+  <SmoothingExpanded.ChunkWallWealthValue>Chunk-built wall wealth per tile: {0}</SmoothingExpanded.ChunkWallWealthValue>
+  <SmoothingExpanded.ChunkFloorWealthHarmony>Floor wealth requires Harmony.</SmoothingExpanded.ChunkFloorWealthHarmony>
+  <SmoothingExpanded.ChunkFloorWealth>Override floor wealth (restart required)</SmoothingExpanded.ChunkFloorWealth>
+  <SmoothingExpanded.ChunkFloorWealthTooltip>When enabled, all chunk-built floors use the value selected below. When disabled, each uses its corresponding stone-floor value.</SmoothingExpanded.ChunkFloorWealthTooltip>
+  <SmoothingExpanded.ChunkFloorWealthValue>Chunk-built floor wealth per tile: {0}</SmoothingExpanded.ChunkFloorWealthValue>
+  <SmoothingExpanded.ChunkBeautyHeader>Chunk-built surface beauty</SmoothingExpanded.ChunkBeautyHeader>
+  <SmoothingExpanded.ChunkWallBeauty>Override wall beauty (restart required)</SmoothingExpanded.ChunkWallBeauty>
+  <SmoothingExpanded.ChunkWallBeautyTooltip>When enabled, all chunk-built walls use the value selected below. When disabled, each matches its corresponding vanilla smoothed wall.</SmoothingExpanded.ChunkWallBeautyTooltip>
+  <SmoothingExpanded.ChunkWallBeautyValue>Chunk-built wall beauty: {0}</SmoothingExpanded.ChunkWallBeautyValue>
+  <SmoothingExpanded.ChunkFloorBeauty>Override floor beauty (restart required)</SmoothingExpanded.ChunkFloorBeauty>
+  <SmoothingExpanded.ChunkFloorBeautyTooltip>When enabled, all chunk-built floors use the value selected below. When disabled, each matches its corresponding vanilla smoothed floor.</SmoothingExpanded.ChunkFloorBeautyTooltip>
+  <SmoothingExpanded.ChunkFloorBeautyValue>Chunk-built floor beauty: {0}</SmoothingExpanded.ChunkFloorBeautyValue>
+  <SmoothingExpanded.ChunkConstructionExplanation>No research required. Each tile costs one matching raw chunk and uses normal stone wall or floor construction work.</SmoothingExpanded.ChunkConstructionExplanation>
+  <SmoothingExpanded.UninstallExplanation>Converts completed chunk-built walls and floors into their vanilla smoothed counterparts. It also cancels unfinished blueprints and frames, returning delivered resources. Vanilla-result surfaces need no conversion.</SmoothingExpanded.UninstallExplanation>
+  <SmoothingExpanded.PrepareUninstall>Prepare loaded save for uninstall</SmoothingExpanded.PrepareUninstall>
+  <SmoothingExpanded.LoadSaveTooltip>Load a save first. Conversion operates on all maps currently held by that save.</SmoothingExpanded.LoadSaveTooltip>
+  <SmoothingExpanded.ResetAll>Reset all settings to defaults</SmoothingExpanded.ResetAll>
+  <SmoothingExpanded.ResetTitle>Reset all settings</SmoothingExpanded.ResetTitle>
+  <SmoothingExpanded.ResetWarning>Resetting all settings will disable chunk-built construction. If this save contains completed custom surfaces or unfinished construction, cancel and use 'Prepare loaded save for uninstall' first.\n\nReset all settings anyway?</SmoothingExpanded.ResetWarning>
+
+  <!-- Save conversion messages. {0}=floors, {1}=walls, {2}=maps, {3}=unfinished constructions. -->
+  <SmoothingExpanded.ConversionNeedsSave>Load a save before converting chunk-built surfaces.</SmoothingExpanded.ConversionNeedsSave>
+  <SmoothingExpanded.ConversionTitle>Convert chunk-built surfaces</SmoothingExpanded.ConversionTitle>
+  <SmoothingExpanded.ConversionWarning>Convert every chunk-built smoothed wall and floor on all loaded maps?\n\nWalls become mineable vanilla smoothed walls. Floors become permanent vanilla smoothed floors. Unfinished blueprints and frames are cancelled and delivered resources returned. This cannot be reversed automatically. Save a backup first.</SmoothingExpanded.ConversionWarning>
+  <SmoothingExpanded.ConversionReport>Conversion complete: {0} floor tile(s) and {1} wall(s) converted on {2} loaded map(s); {3} unfinished blueprint/frame(s) cancelled. Chunk-construction settings were reset to defaults; restart to update Architect visibility. Save before removing the mod.</SmoothingExpanded.ConversionReport>
+  <SmoothingExpanded.ConversionIncomplete>Uninstall preparation is incomplete: {0} custom surface(s) remain in the save. Chunk-construction settings were not reset. Do not remove the mod; check the error log and retry.</SmoothingExpanded.ConversionIncomplete>
+</LanguageData>

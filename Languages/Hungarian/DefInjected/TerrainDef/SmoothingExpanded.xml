@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Constructed/deconstructible floors. -->
+  <SmoothingExpanded_ChunkSmoothFloorSandstone.label>chunk-built smooth sandstone floor</SmoothingExpanded_ChunkSmoothFloorSandstone.label>
+  <SmoothingExpanded_ChunkSmoothFloorGranite.label>chunk-built smooth granite floor</SmoothingExpanded_ChunkSmoothFloorGranite.label>
+  <SmoothingExpanded_ChunkSmoothFloorLimestone.label>chunk-built smooth limestone floor</SmoothingExpanded_ChunkSmoothFloorLimestone.label>
+  <SmoothingExpanded_ChunkSmoothFloorSlate.label>chunk-built smooth slate floor</SmoothingExpanded_ChunkSmoothFloorSlate.label>
+  <SmoothingExpanded_ChunkSmoothFloorMarble.label>chunk-built smooth marble floor</SmoothingExpanded_ChunkSmoothFloorMarble.label>
+  <SmoothingExpanded_ChunkSmoothFloorSandstone.description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</SmoothingExpanded_ChunkSmoothFloorSandstone.description>
+  <SmoothingExpanded_ChunkSmoothFloorGranite.description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</SmoothingExpanded_ChunkSmoothFloorGranite.description>
+  <SmoothingExpanded_ChunkSmoothFloorLimestone.description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</SmoothingExpanded_ChunkSmoothFloorLimestone.description>
+  <SmoothingExpanded_ChunkSmoothFloorSlate.description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</SmoothingExpanded_ChunkSmoothFloorSlate.description>
+  <SmoothingExpanded_ChunkSmoothFloorMarble.description>A constructed floor made directly from a raw stone chunk and polished to a smooth finish.</SmoothingExpanded_ChunkSmoothFloorMarble.description>
+</LanguageData>

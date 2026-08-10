@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.label>chunk-built smooth vacstone wall</SmoothingExpanded_ChunkSmoothWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothWallVacstone.description>A constructed stone wall made directly from a raw chunk and finished with a smooth surface.</SmoothingExpanded_ChunkSmoothWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>vanilla smoothed vacstone wall</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>Consumes one raw chunk to construct a genuine vanilla smoothed stone wall. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalWallVacstone.description>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>vanilla smoothed vacstone floor</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.label>
+  <SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>Consumes one raw chunk to construct genuine vanilla smoothed stone terrain. Once complete, it cannot be deconstructed for the chunk.</SmoothingExpanded_ChunkSmoothNaturalFloorVacstone.description>
+</LanguageData>

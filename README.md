@@ -16,7 +16,7 @@ A RimWorld 1.6 mod that:
 - adds matching Vacstone construction automatically when Odyssey is active;
 - leaves vanilla constructed walls, vanilla floors and unsmoothed rock unchanged.
 
-Version 0.49.0. Created by Lordlony, with development assistance and code review
+Version 0.49.1. Created by Lordlony, with development assistance and code review
 from OpenAI Codex.
 
 ## Installation
@@ -155,14 +155,14 @@ are reloaded. Back up an important save before changing its active mod list.
 
 ## Localisation
 
-English, Simplified Chinese, German, Russian and Spanish keyed strings and
-DefInjected labels/descriptions are included under `Languages`. The non-English
-localisations are AI translations and welcome corrections from native speakers.
-Translators can copy the English folder, rename it to RimWorld's language folder
-name, and translate the text values without changing keys or XML element names.
-Odyssey-only Vacstone translations are kept under
-`Optional/OptionalOdyssey/Languages` so Core-only games do not receive missing-definition
-translation warnings.
+Every RimWorld 1.6 language folder has a complete English fallback for keyed
+strings and DefInjected text, so selecting an untranslated game language never
+shows raw translation keys. Simplified Chinese, German, Russian and Spanish
+have dedicated AI translations; corrections from native speakers are welcome.
+Translators can replace the English fallback values in their language folder
+without changing keys or XML element names. Odyssey-only Vacstone fallbacks are
+kept under `Optional/OptionalOdyssey/Languages` so Core-only games do not
+receive missing-definition translation warnings.
 
 ## Building and validation
 

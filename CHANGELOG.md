@@ -1,5 +1,22 @@
 # Smoothing Expanded changelog
 
+## [0.49.1] - 2026-08-10
+
+### Localisation
+
+- Added complete English fallback language trees for every RimWorld 1.6
+  language, including the conditional Odyssey tree.
+- Untranslated game languages now display English rather than raw translation
+  keys or missing settings text.
+- Preserved the existing Simplified Chinese, German, Russian and Spanish
+  translations.
+
+### Development
+
+- Extended the validator to require all supported language folders in both the
+  main and Odyssey localisation trees, in addition to XML, key and placeholder
+  parity checks.
+
 ## [0.49.0] - 2026-08-08
 
 ### Save and uninstall safety
