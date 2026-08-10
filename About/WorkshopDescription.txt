@@ -78,11 +78,11 @@ See the pinned discussion for expanded compatibility notes, more companion mods 
 
 [h2]Languages[/h2]
 [list]
-[*]English fallback coverage for every RimWorld 1.6 language. Untranslated game languages display English instead of raw translation keys.
-[*]简体中文 (Simplified Chinese) — AI translation; corrections from native speakers are welcome.
-[*]Deutsch (German) — AI translation; corrections from native speakers are welcome.
-[*]Русский (Russian) — AI translation; corrections from native speakers are welcome.
-[*]Español (Spanish) — AI translation; corrections from native speakers are welcome.
+[*]English fallback. AI translation for the following; corrections from native speakers are welcome.
+[*]简体中文 (Simplified Chinese)
+[*]Deutsch (German)
+[*]Русский (Russian)
+[*]Español (Spanish)
 [/list]
 
 [h2]Compatibility reports[/h2]
