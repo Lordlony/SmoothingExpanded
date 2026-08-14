@@ -31,6 +31,6 @@ formatting placeholders after building:
 powershell -NoProfile -ExecutionPolicy Bypass -File Tools\Validate.ps1
 ```
 
-The project does not yet declare an open-source license. Source availability
-alone does not grant redistribution rights; the author should select a license
-before accepting external redistribution or derivative releases.
+This repository includes the Smoothing Expanded Community Reuse License in
+`LICENSE.md`. It permits attributed reuse of individual components in original
+projects, but does not permit duplicate or replacement publication of the mod.
